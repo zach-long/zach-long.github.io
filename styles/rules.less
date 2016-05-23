@@ -1,0 +1,51 @@
+// === constants === \\
+@headerFooterBackground: #ffffff;
+@sectionBackground: #ffffff;
+@transparentColor: #333;
+@detailColor: darkorange;
+
+@windowOpacity: .5;
+
+@divisionBorder: 1px solid #c3c3c3;
+
+@structureElementWidth: 100%;
+@structureElementMargin: 0;
+
+@navElementWidth: 13.88vw;
+@navElementHeight: 100%;
+
+@socialMediaWidth: 6.66vw;
+@socialMediaHeight: 100%;
+
+@linkColor: darkorange;
+@linkTransition: color 150ms;
+@onLinkHover: black;
+
+@projectSize: 33.33vw;
+
+// === mixins === \\
+.Window {
+    width: @structureElementWidth;
+    height: 20vw;
+    background-color: @transparentColor;
+    opacity: @windowOpacity;
+    margin: @structureElementMargin;
+    
+    display: block;
+    clear: both;
+}
+
+.Center {
+    margin: auto;
+    display: block;
+}
+
+.Column {
+    width: 41.66vw;
+    overflow: visible;
+}
+
+.ProjectThumbnail(@projectWidth:@projectSize){
+    width: @projectWidth;
+    height: @projectWidth*.5625;
+}
