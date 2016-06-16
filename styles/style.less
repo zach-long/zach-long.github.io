@@ -388,9 +388,9 @@
 // === page structure === \\
 header {
     width: @structureElementWidth;
-    height: 5vw;
     margin: @structureElementMargin;
-    
+    overflow: hidden;
+  
     z-index: 5;
     display: block;
     position: fixed;
@@ -414,7 +414,7 @@ section {
 
 footer {
     width: @structureElementWidth;
-    height: 13vw;
+    height: 13em;
     margin: @structureElementMargin;
     
     background-color: @headerFooterBackground;
@@ -428,23 +428,18 @@ footer {
 
 // === element positioning & styles === \\
 nav {
-    width: 55.55vw;
+    width: 60em;
     height: 100%;
     float: left;
-    margin-left: 8.33vw;
+    margin-left: 8em;
     opacity: 0;
     ul {
-        height: @navElementHeight;
         list-style-type: none;
         li {
             width: @navElementWidth;
-            height: @navElementHeight;
             display: inline-block;
             a {
-                width: @navElementWidth;
-                height: @navElementHeight;
-                font-family: ;
-                font-size: 2vw;
+                font-size: 2em;
                 color: @linkColor;
                 text-decoration: none;
 
@@ -456,10 +451,8 @@ nav {
                     color: @onLinkHover;
                 }
                 div {
-                    width: @navElementWidth;
-                    height: 4.25vw;
+                    width: 100%;
                     display: block;
-                    padding-top: .75vw;
                     
                     transition: background-color 150ms;
                     &:hover {
@@ -472,21 +465,16 @@ nav {
 }
 
 .social-media {
-    width: 25.77vw;
-    height: 100%;
+    width: 26em;
     float: right;
-    margin-right: 8.33vw;
+    margin-right: 8em;
     opacity: 0;
     ul {
-        height: @navElementHeight;
-        width: @socialMediaWidth*4;
         list-style-type: none;
         float: right;
         li {
             width: @socialMediaWidth;
-            height: @socialMediaHeight;
             display: inline-block;
-            vertical-align: top;
             float: right;
             
             transition: background-color 150ms;
@@ -498,7 +486,8 @@ nav {
                     width: 24px;
                     height: 24px;
                     .Center;
-                    padding-top: 1.5vw;
+                    padding-top: 0.67em;
+                    padding-bottom: 0.923437446em;
                 }
             }
         }
@@ -506,18 +495,18 @@ nav {
 }
 
 #home {
-    height: 95vh - 30vw;
+    height: 30em;
     background-color: rgba(51, 51, 51, @windowOpacity);
     text-align: center;
-    padding-top: 20vw;
+    padding-top: 20%;
     h1 {
-        font-size: 6vw;
+        font-size: 6em;
         color: #f2f2f2;
         opacity: 1;
         font-weight: 400;
     }
     h6 {
-        font-size: 4vw;
+        font-size: 4em;
         color: #f2f2f2;
         font-weight: 400;
         opacity: 0;
@@ -538,23 +527,23 @@ nav {
 .title-wrap {
     width: 33.33%;
     .Center;
-    padding: .5vw 0 .5vw 0;
+    padding: .5% 0 .5% 0;
     
     border-bottom: @divisionBorder;
 }
 .section-title {
-    font-size: 3.5vw;
+    font-size: @headerDesktop;
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
 }
 
 .section-container {
-    width: 83.33vw;
+    width: 83.33%;
     margin: auto;
     overflow: visible;
     
-    padding-top: 2vw;
+    padding-top: 2em;
 }
 
 #left-about-container {
@@ -564,9 +553,9 @@ nav {
         .Center;
         width: 80%;
         text-align: justify;
-        font-size: 1.5vw;
+        font-size: @paraDesktop;
         
-        padding: .75vw;
+        padding: .75em;
         border-left: 2px solid @detailColor;
         background: #f2f2f2;
     }
@@ -591,28 +580,26 @@ nav {
 }
 .project-wrap {
     .ProjectThumbnail;
-    padding-left: .75vw;
+    padding-left: .75em;
     overflow: visible;
     .Center;
     margin-bottom: 10%;
     background-color: @detailColor;
     opacity: 0;
-    h3 {
-        font-size: 1.5vw;
+    h2 {
         font-weight: 300;
     }
     .offset-box {
         width: @projectSize;
-        height: @projectSize * .5625 - 1vw;
+        height: @projectSize * .5625;/* - 1vw;*/
         padding-left: .75vw;
         clear: both;
         .Center;
-        padding-top: 1vw;
+        padding-top: 1em
         background-color: #333;
         img {
             .Center;
             width: 100%;
-            color: ;
         }
     }
 }
@@ -620,8 +607,8 @@ nav {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    margin-top: -0.66vw;
-    margin-left: -0.38vw;
+    margin-top: -0.66em;
+    margin-left: -0.38em;
 }
 
 .thumbnail {
@@ -654,8 +641,7 @@ nav {
     margin: auto;
     display: block;
     vertical-align: top;
-    font-size: 1.5vw;
-    h4 {
+    h2 {
         float: left;
         text-align: left;
     }
@@ -666,14 +652,15 @@ nav {
 }
 
 #footer-container {
-    h6 {
-        font-size: 1.5vw;
+    h2 {
         text-align: center;
-        padding-top: 2vw;
+        padding-top: 2em;
         span {
-            font-size: 2.5vw;
+            font-size: 1.5em;
             vertical-align: middle;
             font-weight: 400;
         }
     }
 }
+
+
