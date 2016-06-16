@@ -1,6 +1,5 @@
 /*
     Table of Contents 
-    - JavaScript interaction
     - background
     - page structure
     - element positioning & style
@@ -11,31 +10,39 @@
 
 @import "rules.less";
 
-// === JavaScript interaction === \\
+
 
 .animate {
   -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 .animateSlow {
-    -webkit-animation-duration: 1.75s;
-    animation-duration: 1.75s;
-    -webkit-animate-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-duration: 1.75s;
+  -moz-animation-duration: 1.75s;
+  animation-duration: 1.75s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .animateFast {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animate-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .projectAnimate {
-    -webkit-animation-duration: .2s;
-    animation-duration: .2s;
-    -webkit-animate-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-duration: .2s;
+  -moz-animation-duration: .2s;
+  animation-duration: .2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @-webkit-keyframes darken {
@@ -57,8 +64,9 @@
     }
 }
 .darken {
-    -webkit-animation-name: darken;
-    animation-name: darken;
+  -webkit-animation-name: darken;
+  -moz-animation-name: darken;
+  animation-name: darken;
 }
 
 @-webkit-keyframes fadeIn {
@@ -81,6 +89,7 @@
 }
 .fadeIn {
   -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
   animation-name: fadeIn;
 }
 
@@ -110,6 +119,7 @@
 
 .zoomIn {
   -webkit-animation-name: zoomIn;
+  -moz-animation-name: zoomIn;
   animation-name: zoomIn;
 }
 @-webkit-keyframes zoomOut {
@@ -138,6 +148,7 @@
 
 .zoomOut {
   -webkit-animation-name: zoomOut;
+  -moz-animation-name: zoomOut;
   animation-name: zoomOut;
 }
 
@@ -169,6 +180,7 @@
 
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
+  -moz-animation-name: slideInLeft;
   animation-name: slideInLeft;
 }
 
@@ -200,6 +212,7 @@
 
 .slideInLeftDramatic {
   -webkit-animation-name: slideInLeftDramatic;
+  -moz-animation-name: slideInLeftDramatic;
   animation-name: slideInLeftDramatic;
 }
 
@@ -231,6 +244,7 @@
 
 .slideInRight {
   -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
   animation-name: slideInRight;
 }
 
@@ -262,6 +276,7 @@
 
 .slideInRightDramatic {
   -webkit-animation-name: slideInRightDramatic;
+  -moz-animation-name: slideInRightDramatic;
   animation-name: slideInRightDramatic;
 }
 
@@ -293,6 +308,7 @@
 
 .slideInDown {
   -webkit-animation-name: slideInDown;
+  -moz-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
@@ -326,6 +342,7 @@
 
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
@@ -361,8 +378,13 @@
 
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
+
+
+
+
 
 * {
     padding: 0;
@@ -428,8 +450,7 @@ footer {
 
 // === element positioning & styles === \\
 nav {
-    width: 60em;
-    height: 100%;
+    width: 55em;
     float: left;
     margin-left: 8em;
     opacity: 0;
@@ -470,6 +491,7 @@ nav {
     margin-right: 8em;
     opacity: 0;
     ul {
+        width: 100%;
         list-style-type: none;
         float: right;
         li {
@@ -486,8 +508,8 @@ nav {
                     width: 24px;
                     height: 24px;
                     .Center;
-                    padding-top: 0.67em;
-                    padding-bottom: 0.923437446em;
+                    padding-top: 1em;
+                    padding-bottom: .59322em;
                 }
             }
         }
@@ -591,7 +613,7 @@ nav {
     }
     .offset-box {
         width: @projectSize;
-        height: @projectSize * .5625;/* - 1vw;*/
+        height: @projectSize * .5625;
         padding-left: .75vw;
         clear: both;
         .Center;
@@ -625,27 +647,17 @@ nav {
     
     margin-top: -20%;
 }
-/*
-#contact-image {
-    width: 33%;
-    overflow: hidden;
-    display: inline-block;
-    img {
-        .Center;
-    }
-}
-*/
 #content-container {
     width: 33%;
     overflow: hidden;
     margin: auto;
     display: block;
     vertical-align: top;
-    h2 {
+    .email {
         float: left;
         text-align: left;
     }
-    p {
+    .address {
         float: right;
         text-align: right;
     }
@@ -658,9 +670,8 @@ nav {
         span {
             font-size: 1.5em;
             vertical-align: middle;
-            font-weight: 400;
+            font-weight: 700;
         }
     }
 }
-
 
