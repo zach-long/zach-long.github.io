@@ -38,7 +38,7 @@
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes darken {
+-webkit-@keyframes darken {
     from {
         opacity: 1;
     }
@@ -61,7 +61,7 @@
     animation-name: darken;
 }
 
-@-webkit-keyframes fadeIn {
+-webkit-@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -84,7 +84,7 @@
   animation-name: fadeIn;
 }
 
-@-webkit-keyframes zoomIn {
+-webkit-@keyframes zoomIn {
   from {
     opacity: 0;
     -webkit-transform: scale3d(.3, .3, .3);
@@ -112,7 +112,7 @@
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
 }
-@-webkit-keyframes zoomOut {
+-webkit-@keyframes zoomOut {
   from {
     opacity: 1;
     -webkit-transform: scale3d(.3, .3, .3);
@@ -141,7 +141,7 @@
   animation-name: zoomOut;
 }
 
-@-webkit-keyframes slideInLeft {
+-webkit-@keyframes slideInLeft {
   from {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
@@ -172,7 +172,7 @@
   animation-name: slideInLeft;
 }
 
-@-webkit-keyframes slideInLeftDramatic {
+-webkit-@keyframes slideInLeftDramatic {
   from {
     -webkit-transform: translate3d(-400%, 0, 0);
     transform: translate3d(-400%, 0, 0);
@@ -203,7 +203,7 @@
   animation-name: slideInLeftDramatic;
 }
 
-@-webkit-keyframes slideInRight {
+-webkit-@keyframes slideInRight {
   from {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
@@ -234,7 +234,7 @@
   animation-name: slideInRight;
 }
 
-@-webkit-keyframes slideInRightDramatic {
+-webkit-@keyframes slideInRightDramatic {
   from {
     -webkit-transform: translate3d(400%, 0, 0);
     transform: translate3d(400%, 0, 0);
@@ -265,7 +265,7 @@
   animation-name: slideInRightDramatic;
 }
 
-@-webkit-keyframes slideInDown {
+-webkit-@keyframes slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -296,7 +296,7 @@
   animation-name: slideInDown;
 }
 
-@-webkit-keyframes fadeInLeft {
+-webkit-@keyframes fadeInLeft {
   from {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -331,7 +331,7 @@
 
 
 
-@-webkit-keyframes fadeInRight {
+-webkit-@keyframes fadeInRight {
   from {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
@@ -591,7 +591,7 @@ nav {
     }
     .offset-box {
         width: @projectSize;
-        height: @projectSize * .5625;/* - 1vw;*/
+        height: @projectSize * .5625;
         padding-left: .75vw;
         clear: both;
         .Center;
@@ -625,16 +625,6 @@ nav {
     
     margin-top: -20%;
 }
-/*
-#contact-image {
-    width: 33%;
-    overflow: hidden;
-    display: inline-block;
-    img {
-        .Center;
-    }
-}
-*/
 #content-container {
     width: 33%;
     overflow: hidden;
