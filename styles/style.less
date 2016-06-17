@@ -431,10 +431,19 @@ section {
 }
 
 .window {
+	@media @mobLand{
+		height: 7.5em;
+	}
+	@media @mobPortM {
+		height: 7.5em;
+	}
     .Window
 }
 
 footer {
+	@media @tabPort {
+		height: unset;
+	}
     width: @structureElementWidth;
     height: 13em;
     margin: @structureElementMargin;
@@ -450,6 +459,21 @@ footer {
 
 // === element positioning & styles === \\
 nav {
+    @media @laptopLarge {
+      	width: 43em;
+    }
+    @media @laptopSmall {
+      	width: 40em;
+    }
+	@media @tabSmLand {
+		margin-left: 0;
+	}
+	@media @tabPort {
+		width: 100%;
+	}
+	@media @mobLand {
+		width: 66%;
+	}
     width: 55em;
     float: left;
     margin-left: 8em;
@@ -457,9 +481,24 @@ nav {
     ul {
         list-style-type: none;
         li {
+            @media @laptopLarge {
+              width: 25%;
+            }
             width: @navElementWidth;
             display: inline-block;
             a {
+				@media @mobLand {
+					font-size: 1.5em;
+				}
+				@media @mobPortM {
+					font-size: 1.5em;
+				}
+				@media @mobPortS {
+					font-size: 1.25em;
+				}
+				@media @mobLandS {
+					font-size: 1.25em;
+				}
                 font-size: 2em;
                 color: @linkColor;
                 text-decoration: none;
@@ -486,6 +525,21 @@ nav {
 }
 
 .social-media {
+    @media @laptopLarge {
+      	width: 20em;
+    }
+	@media @tabSmLand {
+		margin-right: 0;
+	}
+	@media @tabPort {
+		float: none;
+		margin: auto;
+	}
+	@media @mobLand {
+		width: 33%;
+		margin: 0;
+		float: right;
+	}
     width: 26em;
     float: right;
     margin-right: 8em;
@@ -505,6 +559,10 @@ nav {
             }
             a {
                 img {
+					@media @mobLand {
+						padding-top: 0.34em;
+						padding-bottom: .5036458em;
+					}
                     width: 24px;
                     height: 24px;
                     .Center;
@@ -517,17 +575,46 @@ nav {
 }
 
 #home {
+	@media @tabPort {
+		height: 14em;
+	}
+	@media @mobLand {
+		height: 16em;
+		padding-top: 12%;
+	}
+	@media @mobPortM {
+		height: 11em;
+		padding-top: 25%;
+	}
     height: 30em;
     background-color: rgba(51, 51, 51, @windowOpacity);
     text-align: center;
     padding-top: 20%;
     h1 {
+		@media @tabSmLand {
+			font-size: 5em;
+		}
+		@media @tabPort {
+			font-size: 4.5em;
+		}
+		@media @mobPortM {
+			font-size: 3em;
+		}
         font-size: 6em;
         color: #f2f2f2;
         opacity: 1;
         font-weight: 400;
     }
     h6 {
+		@media @tabSmLand {
+			font-size: 3em;
+		}
+		@media @tabPort {
+			font-size: 2.5em;
+		}
+		@media @mobPortM {
+			font-size: 2em;
+		}
         font-size: 4em;
         color: #f2f2f2;
         font-weight: 400;
@@ -540,10 +627,19 @@ nav {
     opacity: 1;
 }
 #bar {
-    opacity: 1;
+	opacity: 1;
 }
 #development {
     opacity: 1;
+}
+
+#home #bar {
+	@media @eReader {
+		display: none;
+	}
+	@media @mobLandS {
+		display: none;
+	}
 }
 
 .title-wrap {
@@ -561,6 +657,12 @@ nav {
 }
 
 .section-container {
+	@media @eReader {
+		width: 100%;
+	}
+	@media @mobLandS {
+		width: 100%;
+	}
     width: 83.33%;
     margin: auto;
     overflow: visible;
@@ -569,6 +671,9 @@ nav {
 }
 
 #left-about-container {
+	@media @tabPort {
+		width: 100%;
+	}
     width: 66.66%;
     float: left;
     p {
@@ -583,6 +688,9 @@ nav {
     }
 }
 #right-about-container {
+	@media @tabPort {
+		display: none;
+	}
     width: 33.33%;
     float: right;
     img {
@@ -593,14 +701,40 @@ nav {
 }
 
 #column-left {
+	@media @tabPort {
+		.ColumnM;
+	}
     .Column;
     float: left;
 }
 #column-right {
+	@media @tabPort {
+		.ColumnM;
+	}
     .Column;
     float: right;
 }
+
 .project-wrap {
+    @media @laptopSmall {
+      	margin-bottom: 15%;
+    }
+	@media @tabSmLand {
+		padding-left: .5vw;
+	}
+	@media @tabPort {
+		.ProjectThumbnailTab;
+		padding-left: .75em;
+	}
+	@media @eReader {
+		.ProjectThumbnailE;
+	}
+	@media @mobPortM {
+		padding: 0;
+	}
+	@media @mobLandS {
+		padding: 0;
+	}
     .ProjectThumbnail;
     padding-left: .75em;
     overflow: visible;
@@ -609,23 +743,61 @@ nav {
     background-color: @detailColor;
     opacity: 0;
     h2 {
+		@media @mobPortM {
+			display: none;
+		}
+		@media @mobLandS {
+			display: none;
+		}
         font-weight: 300;
     }
-    .offset-box {
-        width: @projectSize;
-        height: @projectSize * .5625;
+	.offset-box {
+		@media @tabSmLand {
+			padding-left: 1vw;
+		}
+		@media @tabPort {
+			.ProjectThumbnailTab;
+			padding-left: 1.5vw;
+		}
+		@media @eReader {
+			.ProjectThumbnailE;
+			padding-left: 2vw;
+		}
+		@media @mobPortM {
+			padding: 0;
+			box-shadow: -4px -6px 0 0 darkorange;
+			border: 4px solid #333;
+		}
+		@media @mobLandS {
+			padding: 0;
+			box-shadow: -4px -6px 0 0 darkorange;
+			border: 4px solid #333;
+		}
+        .ProjectThumbnail;
         padding-left: .75vw;
         clear: both;
         .Center;
         padding-top: 1em;
         background-color: #333;
         img {
+			@media @mobPortM {
+				height: 100%;
+			}
+			@media @mobLandS {
+				height: 100%;
+			}
             .Center;
             width: 100%;
         }
     }
 }
 .thumbnail-wrap {
+	@media @mobPortM {
+		margin: 0;
+	}
+	@media @mobLandS {
+		margin: 0;
+	}
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -648,23 +820,44 @@ nav {
     margin-top: -20%;
 }
 #content-container {
+	@media @laptopLarge {
+		width: 50%;
+	}
+	@media @tabPort {
+		width: 80%;
+	}
     width: 33%;
     overflow: hidden;
     margin: auto;
     display: block;
     vertical-align: top;
     .email {
+		@media @mobPortM {
+			float: none;
+			text-align: center;
+		}
         float: left;
         text-align: left;
     }
     .address {
+		@media @mobPortM {
+			float: none;
+			text-align: center;
+			font-size: 1.13em;
+		}
         float: right;
         text-align: right;
     }
 }
 
 #footer-container {
+	@media @tabPort {
+		height: unset;
+	}
     h2 {
+		@media @tabPort {
+			padding-top: 0;
+		}
         text-align: center;
         padding-top: 2em;
         span {
@@ -674,4 +867,3 @@ nav {
         }
     }
 }
-

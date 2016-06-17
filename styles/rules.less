@@ -19,10 +19,24 @@
 @linkTransition: color 150ms;
 @onLinkHover: black;
 
-@projectSize: 35em;
+// change this value to resize projects completely
+@projectSize: 37vw;
+@projectSizeTab: 60vw;
+@projectSizeE: 70vw;
 
 @headerDesktop: 3em;
 @paraDesktop: 1.25em;
+
+// === media query sizes === \\
+@laptopLarge: ~"screen and (max-width: 1440px)";
+@laptopSmall: ~"screen and (max-width: 1280px)";
+@tabSmLand: ~"screen and (max-width: 1024px)";
+@tabPort: ~"screen and (max-width: 800px)";
+@eReader: ~"screen and (max-width: 600px) and (orientation: portrait)";
+@mobLand: ~"screen and (max-width: 736px) and (orientation: landscape)";
+@mobPortM: ~"screen and (max-width: 414px)";
+@mobPortS: ~"screen and (max-width: 320px)";
+@mobLandS: ~"screen and (max-width: 639px) and (orientation: landscape)";
 
 // === mixins === \\
 .Window {
@@ -45,8 +59,20 @@
     width: 50%;
     overflow: visible;
 }
+.ColumnM {
+	width: 100%;
+	overflow: visible;
+}
 
 .ProjectThumbnail(@projectWidth:@projectSize){
     width: @projectWidth;
     height: @projectWidth*.5625;
+}
+.ProjectThumbnailTab(@projectWidth:@projectSizeTab){
+	width: @projectWidth;
+	height: @projectWidth*.5625;
+}
+.ProjectThumbnailE(@projectWidth:@projectSizeE){
+	width: @projectWidth;
+	height: @projectWidth*.5625;
 }
