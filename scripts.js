@@ -23,23 +23,23 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$("#bar").css("opacity", 1);
 			$("#bar").addClass("animate zoomIn");
-		}, 1900);
+		}, 2200);
 
 		setTimeout(function() {
 			$("#development").css("opacity", 1);
 			$("#development").addClass("animate slideInRightDramatic");
-		}, 2800);
+		}, 2900);
 
 		setTimeout(function() {
 			$("header").addClass("animateFast fadeIn");
-		}, 3700)
+		}, 3800)
 
 		setTimeout(function() {
 			$("nav").css("opacity", 1);
 			$("nav").addClass("animate slideInLeft");
 			$(".social-media").css("opacity", 1);
 			$(".social-media").addClass("animate slideInDown");
-		}, 3800);
+		}, 4300);
 	} else {
 		$("header, #design, #bar, #development, nav, .social-media").css("opacity", 1);
 	}
