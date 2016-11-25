@@ -1,0 +1,186 @@
+// this file contains classes used for animation
+
+// variables and mixin for animation parameters
+$animFast: 1.75s;
+$animStrd: 1s;
+$animSlow: .5s;
+$animProj: .2s;
+
+@mixin animated($speed) {
+  -webkit-animation-duration: $speed;
+  -moz-animation-duration: $speed;
+  animation-duration: $speed;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate-fast {
+  @include animated($animFast);
+}
+
+.animate-norm {
+  @include animated($animStrd);
+}
+
+.animate-slow {
+  @include animated($animSlow);
+}
+
+.animate-proj {
+  @include animated($animProj);
+}
+
+// mixins for specific animations
+@mixin animName($name) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  animation-name: $name;
+}
+
+@mixin kf($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin xTransform($style) {
+  -webkit-transform: $style;
+  transform: $style;
+}
+
+// animation classes
+.fadeIn {
+  @include animName(fadeIn);
+  @include kf(fadeIn) {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.zoomIn {
+  @include animName(zoomIn);
+  @include kf(zoomIn) {
+    0% {
+      opacity: 0;
+      @include xTransform(scale3d(.3, .3, .3));
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+.zoomOut {
+  @include animName(zoomOut);
+  @include kf(zoomOut) {
+    0% {
+      opacity: 1;
+      @include xTransform(scale3d(.3, .3, .3));
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+.slideInLeft {
+  @include animName(slideInLeft);
+  @include kf(slideInLeft) {
+    0% {
+      visibility: visible;
+      @include xTransform(translate3d(-100%, 0, 0));
+    }
+    100% {
+      @include xTransform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.slideInLeftDramatic {
+  @include animName(slideInLeftDramatic);
+  @include kf(slideInLeftDramatic) {
+    0% {
+      visibility: visible;
+      @include xTransform(translate3d(-400%, 0, 0));
+    }
+    100% {
+      @include xTransform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.slideInRight {
+  @include animName(slideInRight);
+  @include kf(slideInRight) {
+    0% {
+      visibility: visible;
+      @include xTransform(translate3d(100%, 0, 0));
+    }
+    100% {
+      @include xTransform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.slideInRightDramatic {
+  @include animName(slideInRightDramatic);
+  @include kf(slideInRightDramatic) {
+    0% {
+      visibility: visible;
+      @include xTransform(translate3d(400%, 0, 0));
+    }
+    100% {
+      @include xTransform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.slideInDown {
+  @include animName(slideInDown);
+  @include kf(slideInDown) {
+    0% {
+      visibility: visible;
+      @include xTransform(translate3d(0, -100%, 0));
+    }
+    100% {
+      @include xTransform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.fadeInLeft {
+  @include animName(fadeInLeft);
+  @include kf(fadeInLeft) {
+    0% {
+      opacity: 0;
+      @include xTransform(translate3d(-100%, 0, 0));
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+}
+
+.fadeInRight {
+  @include animName(fadeInRight);
+  @include kf(fadeInRight) {
+    0% {
+      opacity: 0;
+      @include xTransform(translate3d(100%, 0, 0));
+    }
+    100% {
+      opacity: 1;
+      @include xTransform(none);
+    }
+  }
+}

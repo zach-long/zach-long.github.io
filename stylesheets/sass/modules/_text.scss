@@ -1,0 +1,38 @@
+// contains basic text styling
+
+.section-title {
+  h1 {
+    font-family: $fontSecondary;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @include standardText;
+  margin: 0;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  font-family: $fontPrimary;
+  text-decoration: none;
+  color: $flairColor;
+}
+
+#bio {
+  @include textBack;
+  @include mobileSm {
+    margin: .4em;
+  }
+  @include tablet {
+    margin: 1em;
+  }
+}
+
+#sample-description {
+  @include textBack;
+}

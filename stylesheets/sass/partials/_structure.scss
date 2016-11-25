@@ -1,0 +1,116 @@
+// contains styling focused on the general layout of the page
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  max-width: 100vw;
+  font-size: .75em;
+  @include standardBackdrop;
+  @include xBrowserFlex {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  @include tablet {
+    font-size: 1em;
+  }
+}
+
+section:not(#home) {
+  overflow: hidden;
+  padding: $sectionPadding;
+  @include standardBackdrop;
+
+  .section-title {
+    width: 48%;
+    margin: 0 auto 1em;
+    text-align: center;
+    border-bottom: 1px solid $lineColor;
+    font-size: 1.75em;
+    @include tablet {
+      font-size: 2em;
+      width: 33.33%;
+    }
+  }
+
+  .section-container {
+    @include centerSection;
+
+  }
+}
+
+.window {
+  width: $sectionW;
+  height: 10vh;
+  background-color: $altColorDark;
+  opacity: 0.5;
+
+  @include tablet {
+    height: $windowH;
+  }
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: $sectionPadding;
+  @include standardBackdrop;
+
+  h4 {
+    font-size: 1.25em;
+    border-top: 1px solid $lineColor;
+    padding-top: 2.5em;
+    @include centerSection;
+  }
+}
+
+.one-third {
+  flex: 1 0 0;
+}
+
+.two-thirds {
+  flex: 2 0 0;
+}
+
+.five {
+  flex: 5 0 0;
+}
+
+.two {
+  flex: 2 0 0;
+}
+
+.one-half {
+  flex: 1 0 0;
+  width: 96%;
+  max-width: 96%;
+  min-width: 96%;
+  padding: 2%;
+
+  @include tablet {
+    width: 46%;
+    max-width: 46%;
+    min-width: 46%;
+    padding: 2%;
+  }
+}
+
+ul {
+  @include xBrowserFlex;
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    flex: 1 0 auto;
+    text-align: center;
+  }
+}

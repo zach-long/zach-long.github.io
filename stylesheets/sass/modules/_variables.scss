@@ -1,0 +1,38 @@
+// contains frequently used parameters
+
+$fontPrimary: 'Titillium Web', sans-serif;
+$fontSecondary: 'Oswald', sans-serif;
+$fontPrimaryWeight: 300;
+
+$defaultColor: #FFF;
+$altColorLight: #F2F2F2;
+$altColorDark: #333;
+$flairColor: #FF8C00;
+$lineColor: #C3C3C3;
+
+$sectionW: 100%;
+$windowH: 20em;
+
+$styleBorder: 3px;
+$sectionPadding: 2.5em 0 5em 0;
+
+$bg0: #000;
+$bg1: #b35900;
+$bg2: #804000;
+$bg3: #8c8c8c;
+$bg4: #8d95a5;
+$bg5: #595959;
+$bg6: #656e81;
+$bg7: #333;
+$bg8: #434956;
+
+$altBg: linear-gradient(36deg,
+	$bg0 0%, $bg1 0%,
+	$bg2 12.5%, $bg3 12.5%,
+	$bg4 25%, $bg5 25%,
+	$bg6 37.5%, $bg7 37.5%,
+	$bg8 50%, $bg8 50%,
+	$bg7 62.5%, $bg6 62.5%,
+	$bg5 75%, $bg4 75%,
+	$bg3 87.5%, $bg2 87.5%,
+	$bg1 100%, $bg0 100%);
