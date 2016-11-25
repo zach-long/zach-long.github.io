@@ -1,0 +1,43 @@
+// media query breakpoints
+
+$mobileSmW: 320px;
+$mobileLgW: 500px;
+$tabletW: 768px;
+$laptopW: 1024px;
+$desktopW: 1440px;
+
+@mixin mobileSm {
+  @media (min-width: #{$mobileSmW}) {
+    @content;
+  }
+}
+
+@mixin mobileLg {
+  @media (min-width: #{$mobileLgW}) {
+    @content;
+  }
+}
+
+@mixin intermed {
+  @media (min-width: 360px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tabletW}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptopW}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktopW}) {
+    @content;
+  }
+}

@@ -1,0 +1,22 @@
+
+$baseImgPath: '../resources/images/thumbnails/';
+
+$projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tictac', 'wikipedia');
+
+@each $proj in $projs {
+  ##{$proj} {
+    background: url('#{$baseImgPath}#{$proj}.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 11em;
+
+    @include mobileLg {
+      height: 13em;
+    }
+
+    @include laptop {
+      height: 18em;
+    }
+  }
+}
