@@ -47,22 +47,6 @@ Portfolio = {
 
 	},
 
-	/*
-	// extends obj properties to a new object
-	"extend" : function(props, descs) {
-		descs = descs || {};
-		if (props) {
-			var propNames = Object.getOwnPropertyNames(props);
-			propNames.forEach(function(vals) {
-				if (!descs.hasOwnProperty(propNames)) {
-					descs[vals] = Object.getOwnPropertyDescriptor(props, vals);
-				}
-			})
-		}
-		return Object.create(this, descs);
-	},
-	*/
-
 	// listens for window location and project locations
 	// anytime the user scrolls, will reveal project
 	// if within parameters

@@ -1,7 +1,7 @@
 
 $baseImgPath: '../resources/images/thumbnails/';
 
-$projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tictac', 'wikipedia');
+$projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tictac', 'wikipedia', 'timestamp', 'headparse', 'miniurl', 'vote');
 
 @each $proj in $projs {
   ##{$proj} {
@@ -18,5 +18,21 @@ $projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tict
     @include laptop {
       height: 18em;
     }
+  }
+}
+
+.coming-soon {
+  color: $altColorLight;
+  text-align: center;
+
+  h2 {
+    font-family: $fontSecondary;
+    position: relative;
+    margin: 0;
+    padding: 1em 0 0 0;
+  }
+  p {
+    font-family: $fontSecondary;
+    
   }
 }

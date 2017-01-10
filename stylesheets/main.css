@@ -696,4 +696,67 @@ header .social-nav li a {
     #wikipedia {
       height: 18em; } }
 
+#timestamp {
+  background: url("../resources/images/thumbnails/timestamp.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 11em; }
+  @media (min-width: 500px) {
+    #timestamp {
+      height: 13em; } }
+  @media (min-width: 1024px) {
+    #timestamp {
+      height: 18em; } }
+
+#headparse {
+  background: url("../resources/images/thumbnails/headparse.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 11em; }
+  @media (min-width: 500px) {
+    #headparse {
+      height: 13em; } }
+  @media (min-width: 1024px) {
+    #headparse {
+      height: 18em; } }
+
+#miniurl {
+  background: url("../resources/images/thumbnails/miniurl.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 11em; }
+  @media (min-width: 500px) {
+    #miniurl {
+      height: 13em; } }
+  @media (min-width: 1024px) {
+    #miniurl {
+      height: 18em; } }
+
+#vote {
+  background: url("../resources/images/thumbnails/vote.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 11em; }
+  @media (min-width: 500px) {
+    #vote {
+      height: 13em; } }
+  @media (min-width: 1024px) {
+    #vote {
+      height: 18em; } }
+
+.coming-soon {
+  color: #F2F2F2;
+  text-align: center; }
+  .coming-soon h2 {
+    font-family: "Oswald", sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 1em 0 0 0; }
+  .coming-soon p {
+    font-family: "Oswald", sans-serif; }
+
 /*# sourceMappingURL=main.css.map */
