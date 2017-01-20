@@ -1,7 +1,7 @@
 
 $baseImgPath: '../resources/images/thumbnails/';
 
-$projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tictac', 'wikipedia', 'timestamp', 'headparse', 'miniurl', 'vote');
+$projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tictac', 'wikipedia', 'timestamp', 'headparse', 'miniurl', 'nodevote');
 
 @each $proj in $projs {
   ##{$proj} {
@@ -21,7 +21,7 @@ $projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tict
   }
 }
 
-.coming-soon {
+.api {
   color: $altColorLight;
   text-align: center;
 
@@ -33,6 +33,27 @@ $projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tict
   }
   p {
     font-family: $fontSecondary;
-    
+
   }
+}
+
+.coming-soon {
+  color: #333;
+  text-align: center;
+  opacity: 0.5;
+
+  h2 {
+    font-family: $fontSecondary;
+    position: relative;
+    margin: 0;
+    padding: 5em 0 0 0;
+  }
+
+  p {
+    font-family: $fontSecondary;
+  }
+}
+
+#nodevote {
+  background-position: unset;
 }
