@@ -1,7 +1,7 @@
 
 $baseImgPath: '../resources/images/thumbnails/';
 
-$projs: ('convergence', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tictac', 'wikipedia', 'timestamp', 'headparse', 'miniurl', 'nodevote');
+$projs: ('spacebetween', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tictac', 'wikipedia', 'timestamp', 'headparse', 'miniurl', 'nodevote');
 
 @each $proj in $projs {
   ##{$proj} {

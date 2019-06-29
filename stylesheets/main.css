@@ -592,17 +592,17 @@ header .social-nav li a {
   font-weight: bold;
   vertical-align: middle; }
 
-#convergence {
-  background: url("../resources/images/thumbnails/convergence.png");
+#spacebetween {
+  background: url("../resources/images/thumbnails/spacebetween.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 11em; }
   @media (min-width: 500px) {
-    #convergence {
+    #spacebetween {
       height: 13em; } }
   @media (min-width: 1024px) {
-    #convergence {
+    #spacebetween {
       height: 18em; } }
 
 #calculator {
