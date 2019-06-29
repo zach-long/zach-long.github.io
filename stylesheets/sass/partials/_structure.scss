@@ -50,7 +50,7 @@ section:not(#home) {
   width: $sectionW;
   height: 10vh;
   background-color: $altColorDark;
-  opacity: 0.5;
+  opacity: $transparency;
 
   @include tablet {
     height: $windowH;

@@ -7,8 +7,9 @@ code {
 }
 
 .background {
-  /*background: url('../resources/images/macbook_bg.jpg');*/
-  background: $altBg;
+  // background: url('../resources/images/macbook_bg.jpg');
+  // background: $altBg;
+  background: $bgNew;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -66,7 +67,7 @@ header {
   font-size: 1.25em;
   font-weight: 300;
   color: $defaultColor;
-  background-color: rgba(51, 51, 51, .5);
+  background-color: rgba(51, 51, 51, $transparency);
 
   @include tablet {
     font-size: 2em;
@@ -146,9 +147,9 @@ header {
         border-right: $styleBorder solid $flairColor;
       }
     }
-    .two-thirds {
+    // .two-thirds {
       //flex: 2 0 auto;
-    }
+    // }
   }
 }
 
@@ -214,7 +215,7 @@ header {
   margin-left: 2%;
   padding: 2%;
   width: calc(92% - 3px);
-  
+
   p {
     text-align: center;
   }

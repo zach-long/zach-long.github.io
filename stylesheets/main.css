@@ -315,7 +315,7 @@ section:not(#home) {
   width: 100%;
   height: 10vh;
   background-color: #333;
-  opacity: 0.5; }
+  opacity: 0.25; }
   @media (min-width: 768px) {
     .window {
       height: 20em; } }
@@ -383,8 +383,7 @@ code {
   font-size: .8em; }
 
 .background {
-  /*background: url('../resources/images/macbook_bg.jpg');*/
-  background: linear-gradient(36deg, #000 0%, #b35900 0%, #804000 12.5%, #8c8c8c 12.5%, #8d95a5 25%, #595959 25%, #656e81 37.5%, #333 37.5%, #434956 50%, #434956 50%, #333 62.5%, #656e81 62.5%, #595959 75%, #8d95a5 75%, #8c8c8c 87.5%, #804000 87.5%, #b35900 100%, #000 100%);
+  background: linear-gradient(39deg, black 0%, #6cabff 88%);
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -417,7 +416,7 @@ header .social-nav li a {
   font-size: 1.25em;
   font-weight: 300;
   color: #FFF;
-  background-color: rgba(51, 51, 51, 0.5); }
+  background-color: rgba(51, 51, 51, 0.25); }
   @media (min-width: 768px) {
     #home {
       font-size: 2em;

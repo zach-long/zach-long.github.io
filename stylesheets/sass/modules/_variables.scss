@@ -10,6 +10,8 @@ $altColorDark: #333;
 $flairColor: #FF8C00;
 $lineColor: #C3C3C3;
 
+$transparency: 0.25;
+
 $sectionW: 100%;
 $windowH: 20em;
 
@@ -36,3 +38,5 @@ $altBg: linear-gradient(36deg,
 	$bg5 75%, $bg4 75%,
 	$bg3 87.5%, $bg2 87.5%,
 	$bg1 100%, $bg0 100%);
+
+$bgNew: linear-gradient(39deg, rgba(0,0,0,1) 0%, rgba(108,171,255,1) 88%);
