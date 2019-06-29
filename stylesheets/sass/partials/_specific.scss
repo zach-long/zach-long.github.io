@@ -1,6 +1,11 @@
 /* contains styling considered too specific to include in
    a generic 'structure' layout file */
 
+code {
+  font-family: Consolas, monaco, monospace;
+  font-size: .8em;
+}
+
 .background {
   /*background: url('../resources/images/macbook_bg.jpg');*/
   background: $altBg;
@@ -85,11 +90,11 @@ header {
     width: 55%;
     margin: auto;
     text-align: center;
-    @include xBrowserFlex {
+    @include xBrowserFlexCol {
       -webkit-flex-wrap: nowrap;
       flex-wrap: nowrap;
     }
-    h2 {
+    h4 {
       flex: 1 0 auto;
       font-size: 1em;
       font-weight: 400;
@@ -152,15 +157,29 @@ header {
   padding: 2%;
   width: calc(92% - 3px);
 
+  .partitioned {
+    margin: 0 auto 1em;
+    width: 75%;
+    border-bottom: 1px solid $lineColor;
+    padding-bottom: 2em;
+  }
+
   p {
+    text-align: center;
+  }
+
+  p,
+  li {
     width: 100%;
+    margin: auto;
 
     @include tablet {
       width: 66.66%;
     }
   }
 
-  p:not(:last-child) {
+  p:not(:last-child),
+  li {
     margin-bottom: 1em;
   }
 }
@@ -188,6 +207,31 @@ header {
   h3 {
     background-color: $altColorLight;
     padding: .25em 0 .25em 1em;
+  }
+}
+
+#project-description {
+  margin-left: 2%;
+  padding: 2%;
+  width: calc(92% - 3px);
+  
+  p {
+    text-align: center;
+  }
+
+  p,
+  li {
+    width: 100%;
+    margin: auto;
+
+    @include tablet {
+      width: 66.66%;
+    }
+  }
+
+  p:not(:last-child),
+  li {
+    margin-bottom: 1em;
   }
 }
 

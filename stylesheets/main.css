@@ -5,7 +5,7 @@
   font-weight: 300;
   margin: 0; }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, li {
   font-family: "Titillium Web", sans-serif;
   font-weight: 300;
   margin: 0; }
@@ -30,7 +30,8 @@ a {
     #bio {
       margin: 1em; } }
 
-#sample-description {
+#sample-description,
+#project-description {
   background-color: #F2F2F2;
   border-left: 3px solid #FF8C00;
   padding: 1em .5em;
@@ -357,7 +358,7 @@ footer {
       min-width: 46%;
       padding: 2%; } }
 
-ul {
+.nav {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -371,12 +372,16 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0; }
-  ul li {
+  .nav li {
     flex: 1 0 auto;
     text-align: center; }
 
 /* contains styling considered too specific to include in
    a generic 'structure' layout file */
+code {
+  font-family: Consolas, monaco, monospace;
+  font-size: .8em; }
+
 .background {
   /*background: url('../resources/images/macbook_bg.jpg');*/
   background: linear-gradient(36deg, #000 0%, #b35900 0%, #804000 12.5%, #8c8c8c 12.5%, #8d95a5 25%, #595959 25%, #656e81 37.5%, #333 37.5%, #434956 50%, #434956 50%, #333 62.5%, #656e81 62.5%, #595959 75%, #8d95a5 75%, #8c8c8c 87.5%, #804000 87.5%, #b35900 100%, #000 100%);
@@ -433,8 +438,8 @@ header .social-nav li a {
     text-align: center;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
+    -webkit-flex-direction: column;
+    flex-direction: column;
     -webkit-justify-content: space-around;
     justify-content: space-around;
     -webkit-align-items: center;
@@ -443,7 +448,7 @@ header .social-nav li a {
     align-content: center;
     -webkit-flex-wrap: nowrap;
     flex-wrap: nowrap; }
-    #home #caption h2 {
+    #home #caption h4 {
       flex: 1 0 auto;
       font-size: 1em;
       font-weight: 400;
@@ -486,12 +491,23 @@ header .social-nav li a {
   margin-left: 2%;
   padding: 2%;
   width: calc(92% - 3px); }
+  #sample-description .partitioned {
+    margin: 0 auto 1em;
+    width: 75%;
+    border-bottom: 1px solid #C3C3C3;
+    padding-bottom: 2em; }
   #sample-description p {
-    width: 100%; }
+    text-align: center; }
+  #sample-description p,
+  #sample-description li {
+    width: 100%;
+    margin: auto; }
     @media (min-width: 768px) {
-      #sample-description p {
+      #sample-description p,
+      #sample-description li {
         width: 66.66%; } }
-  #sample-description p:not(:last-child) {
+  #sample-description p:not(:last-child),
+  #sample-description li {
     margin-bottom: 1em; }
 
 #sample-container {
@@ -519,6 +535,24 @@ header .social-nav li a {
   #sample-container h3 {
     background-color: #F2F2F2;
     padding: .25em 0 .25em 1em; }
+
+#project-description {
+  margin-left: 2%;
+  padding: 2%;
+  width: calc(92% - 3px); }
+  #project-description p {
+    text-align: center; }
+  #project-description p,
+  #project-description li {
+    width: 100%;
+    margin: auto; }
+    @media (min-width: 768px) {
+      #project-description p,
+      #project-description li {
+        width: 66.66%; } }
+  #project-description p:not(:last-child),
+  #project-description li {
+    margin-bottom: 1em; }
 
 #project-container {
   display: -webkit-flex;
@@ -746,6 +780,19 @@ header .social-nav li a {
       height: 13em; } }
   @media (min-width: 1024px) {
     #nodevote {
+      height: 18em; } }
+
+#makegains {
+  background: url("../resources/images/thumbnails/makegains.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 11em; }
+  @media (min-width: 500px) {
+    #makegains {
+      height: 13em; } }
+  @media (min-width: 1024px) {
+    #makegains {
       height: 18em; } }
 
 .api {

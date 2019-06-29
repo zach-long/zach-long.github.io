@@ -23,6 +23,20 @@
   margin: 1em;
 }
 
+@mixin xBrowserFlexCol {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  @content
+}
+
 @mixin xBrowserFlex {
   display: -webkit-flex;
   display: flex;

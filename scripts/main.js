@@ -90,29 +90,29 @@ Portfolio = {
 			LoadComponents.inCenter(ptOne)
 		}, 1500); //1000
 
-/*
+
 		// reveal caption pt 2
 		setTimeout(function() {
-			LoadComponents.mainTwo(ptTwo)
+			LoadComponents.inCenter(ptTwo)
 		}, 2200);
 
 
-		// reveal caption pt 3
+/* 		// reveal caption pt 3
 		setTimeout(function() {
 			LoadComponents.mainThree(ptThree)
-		}, 2900);
-*/
+		}, 2900); */
+
 
 		// reveal header
 		setTimeout(function() {
 			LoadComponents.headBar(header)
-		}, 2200); //3800
+		}, 2900); //3800
 
 
 		// reveal navigation components
 		setTimeout(function() {
 			LoadComponents.headContent(pageNav, sociNav)
-		}, 2700); // 4300
+		}, 3800); // 4300
 
 	}
 }
@@ -161,4 +161,6 @@ window.onload = function() {
 	Portfolio.configure(mob);
 	Portfolio.loadSequence();
 	Portfolio.projReveal();
+	
 }
+hljs.initHighlightingOnLoad();

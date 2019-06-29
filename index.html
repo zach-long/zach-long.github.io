@@ -9,11 +9,12 @@
   <meta name="author" content="Zachary Long">
   <meta name="description" content="A web development portfolio for Zachary Long">
   <meta name="keywords" content="web, development, web development, front-end development, front-end, front end, web design, portfolio, html, html5, css, css3, javascript, jquery, web portfolio, zachary long">
-  <!-- jQuery & JavaScript -->
   <script src="resources/jquery-3.1.1.min.js"></script>
-  <script src="scripts/main.js" type="text/javascript"></script>
-  <!-- stylesheets -->
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/monokai-sublime.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <link href="stylesheets/main.css" rel="stylesheet" type="text/css">
+  <script src="scripts/main.js" type="text/javascript"></script>
   <link href="resources/images/favicon.png" rel="icon" sizes="16x16" type="image/jpeg">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700|Oswald:400,300" rel="stylesheet" type="text/css">
 </head>
@@ -23,14 +24,14 @@
   <div class="background"></div>
 
   <header>
-    <ul class="page-nav five">
+    <ul class="nav page-nav five">
       <li><a href="#home"><div>Home</div></a></li>
       <li><a href="#about"><div>About</div></a></li>
       <li><a href="#samples"><div>Code</div></a></li>
       <li><a href="#projects"><div>Projects</div></a></li>
       <li><a href="#contact"><div>Contact</div></a></li>
     </ul>
-    <ul class="social-nav two">
+    <ul class="nav social-nav two">
       <li><a href="https://www.linkedin.com/in/zachary-long-72570390" target="_blank"><div><img src="resources/images/icons/linkedin.png" alt="linkedin"/></div></a></li>
       <li><a href="https://github.com/zach-long" target="_blank"><div><img src="resources/images/icons/github.png" alt="github"/></div></a></li>
     </ul>
@@ -39,15 +40,16 @@
   <section id="home">
     <h1 id="me">Zachary Long</h1>
     <div id="caption">
-      <h2 id="pt1">Front-End Development</h2>
+      <h6 id="pt1">Full-Stack Developer</h6>
+      <h6 id="pt2">JavaScript Specialist</h6>
     </div>
   </section>
 
   <section id="about">
-    <div class="section-title"><h1>About</h1></div>
+    <!-- <div class="section-title"><h1>About</h1></div>
     <div class="section-container">
       <div id="bio" class="two-thirds">
-        <p>Greetings, and welcome to my portfolio. I am a web developer based out of Harrisburg, PA, with a passion for writing code that is, simply put, really great.</p>
+        <p>Welcome to my portfolio.</p>
         <p>I consider myself a very proactive learner, always finding myself wanting to understand everything more deeply than I currently do. This has been an incredible boon as a developer because, while languages and computer science are based around some primary defining principles, the idiosyncrasies of individual languages lend themselves to requiring a great depth of knowledge before attaining mastery.<br>I find that there's always more to understand, and more technology to keep up with.</p>
         <p>Perhaps one of my favorite aspects of programming/development is optimization, through all aspects of development. I enjoy crafting a plan and 'writing the blueprints' before starting a project because then (hopefully) I can sit down and write the best code. Likewise, I enjoy looking through after and refactoring to make the finished product faster, cleaner, and more maintainable.</p>
         <p>I'm passionate about a job <i>done well</i>.</p>
@@ -56,30 +58,77 @@
       <div id="profile-pic" class="one-third">
         <img src="resources/images/profile.jpg" alt="My profile picture"/>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <div class="window"></div>
 
   <section id="samples">
-    <div class="section-title"><h1>Code Samples</h1></div>
+    <div class="section-title"><h1>Code</h1></div>
     <div class="section-container">
-      <!-- is this necessary? -->
       <div id="sample-description">
-        <p>This excerpt is part of the code for my 'project' section on this site.<br>
-        I wanted to create a unique ID for each project div and display that project's thumbnail image as a background property.</p>
-        <p>I used this snippet of SCSS to keep this code <i>DRY</i>, uncumbersome, and very easy to update in the future.</p>
-        <p>This is a general example of a common mindset I have when I write code. I think great code strikes a balance between concision and verbosity, and does a lot of work <i>for</i> the human writing it.
-        <br>That said, I'm sure this isn't the <i>best</i> way this code could be written, but for my purposes on this small-scale portfolio it wouldn't be efficient to think of all possible refactorizations and test them, this is already the third incarnation of this component.</p>
-      </div>
-      <div id="sample-container">
-        <div class="one-half">
-          <h3>Uncompiled SCSS</h3>
-          <img src="resources/images/uncompiled.png" alt="Raw SCSS before being compiled into CSS."/>
+        <div class="partitioned">
+          <p>Code should be elegant.<br/>What is elegant code?<br/></p>
+          <p>I think elegant code makes things easier for both the user <i>and</i> the developer.</p>
         </div>
-        <div class="one-half">
-          <h3>Compiled SCSS</h3>
-          <img src="resources/images/compiled.png" alt="The compiled result of just 13 lines of SCSS."/>
+        <br/>
+        <p>The example below is from a chat bot I built for a friend.</p>
+        <p><i>How does this code establish elegance?</i></p>
+        <p>
+          <ul>
+            <li>This module draws data from a private <code>config.json</code> established by the user. This allows the user to set their own parameters for the server like name, IP, and port, without needing to put it in the code.</li>
+            <li>This particular module is where bot commands are established. The <code>commands</code> Object acts as a controller for this. Using the <code>"status"</code> Object as an example, we can see:</li>
+            <ul>
+              <li><code>"name"</code>: The property of this is what users - people who can communicate with the bot - type in order to execute the command.</li>
+              <li><code>"action"</code>: This is the name of a function associated with the action.</li>
+              <li><code>"description"</code>: This is the description given to users when they might ask what the bot can do.</li>
+            </ul>
+          </ul>
+        </p>
+        <p>This design makes it easy for a developer to link the experience of the user, to the logic of the program.<br/>More importantly, it also sets a precedent for how additional features can be added to the bot, and makes it simple to do so.</p>
+        <div id="sample-container">
+          <pre><code>
+            const conf = require('./config.json');
+            const execStatus = require('./helperFunctions').status;
+  
+            module.exports.commands = {
+              "docsLink": {
+                "name": "docsLinkPls",
+                "action": docsLink,
+                "description": "Sends the link to the discord.js api documentation."
+              },
+              "ip": {
+                "name": "ip",
+                "action": ip,
+                "description": "Broadcasts the ip address of the server."
+              },
+              "status": {
+                "name": "status",
+                "action": status,
+                "description": "Says whether or not the server is up, and how many people are online."
+              }
+            }
+  
+            function docsLink(args, cb) {
+              let str = `View API documentation here: https://discord.js.org/#/docs/main/stable/general/welcome`;
+              cb(null, str);
+            }
+  
+            function ip(args, cb) {
+              let str = `${conf.discord_server_name}: ${conf.ip}:${conf.port}`;
+              cb(null, str);
+            }
+  
+            function status(args, cb) {
+              execStatus().then((result) => {
+                console.log(`* commands.js > status() > result = ${result}`);
+                cb(null, result);
+              }).catch((err) => {
+                console.log(`* commands.js > status() > err = ${err}`);
+                cb(err);
+              });
+            }
+          </code></pre>
         </div>
       </div>
     </div>
@@ -89,18 +138,30 @@
 
   <section id="projects">
     <div class="section-title"><h1>Projects</h1></div>
+    <!-- <div id="project-description">
+      <p>Thing I have built.</p>
+      <p>Most of it is to feed my curiousity.</p>
+    </div> -->
     <div id="project-container" class="section-container">
 
       <div class='project'>
-	      <h2>Space Between - Website</h2>
+	      <h2>Space Between - React SPA on Node.js</h2>
 	      <div class='offset'>
 	        <a href='http://spacebetween.band' target='_blank'>
 	           <div id='spacebetween'></div>
 	        </a>
 	      </div>
-	    </div>
+      </div>
       <div class='project'>
-	      <h2>Voting App - Full-stack Node.js App</h2>
+          <h2>MakeGains - EJS, Express.js, MongoDB</h2>
+          <div class='offset'>
+            <a href='https://makegains.herokuapp.com/' target='_blank'>
+               <div id='makegains'></div>
+            </a>
+          </div>
+        </div>
+      <div class='project'>
+	      <h2>Voting App - Express.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://nodevote.herokuapp.com/' target='_blank'>
 	           <div id='nodevote'>
@@ -109,7 +170,7 @@
 	      </div>
 	    </div>
       <div class='project'>
-	      <h2>MiniURL - Node.js with MongoDB</h2>
+	      <h2>MiniURL - Microservice; Node.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://afternoon-crag-81590.herokuapp.com/' target='_blank'>
 	           <div id='miniurl' class='api'>
@@ -119,7 +180,7 @@
 	      </div>
 	    </div>
       <div class='project'>
-	      <h2>Header Parser - Node.js Microservice</h2>
+	      <h2>Header Parser - Microservice; Node.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://radiant-forest-74929.herokuapp.com/' target='_blank'>
 	           <div id='headparse' class='api'>
@@ -129,7 +190,7 @@
 	      </div>
 	    </div>
       <div class='project'>
-	      <h2>Timestamp API - Node.js Microservice</h2>
+	      <h2>Timestamp API - Microservice; Node.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://fierce-beyond-84088.herokuapp.com/' target='_blank'>
 	           <div id='timestamp' class='api'>
@@ -138,14 +199,14 @@
 	        </a>
 	      </div>
 	    </div>
-      <div class='project'>
+      <!-- <div class='project'>
 	      <h2>JavaScript Calculator - jQuery</h2>
 	      <div class='offset'>
 	        <a href='http://codepen.io/thezach/full/vKYdvL/' target='_blank'>
 	           <div id='calculator'></div>
 	        </a>
 	      </div>
-	    </div>
+	    </div> -->
       <div class='project'>
 	      <h2>Pomodoro Timer - Javascript</h2>
 	      <div class='offset'>
@@ -154,7 +215,7 @@
 	        </a>
 	      </div>
 	    </div>
-      <div class='project'>
+      <!-- <div class='project'>
 	      <h2>Simon - jQuery</h2>
 	      <div class='offset'>
 	        <a href='http://codepen.io/thezach/pen/XKMOwP' target='_blank'>
@@ -169,7 +230,7 @@
 	           <div id='tictac'></div>
 	        </a>
 	      </div>
-	    </div>
+	    </div> -->
       <div class='project'>
 	      <h2>Wikipedia Application - jQuery</h2>
 	      <div class='offset'>
@@ -195,7 +256,7 @@
   <footer>
     <h4><span class="copyright">&#169;</span> Zachary Long &mdash; 2016</h4>
   </footer>
-
+  
 </body>
 
 </html>

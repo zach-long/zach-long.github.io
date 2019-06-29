@@ -102,7 +102,7 @@ footer {
   }
 }
 
-ul {
+.nav {
   @include xBrowserFlex;
 
   list-style-type: none;

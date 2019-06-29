@@ -8,7 +8,7 @@
   }
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, li {
   @include standardText;
   margin: 0;
 }
@@ -33,6 +33,7 @@ a {
   }
 }
 
-#sample-description {
+#sample-description,
+#project-description {
   @include textBack;
 }
