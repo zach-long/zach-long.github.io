@@ -83,18 +83,18 @@ Portfolio = {
 		// hide name and header
 		setTimeout(function() {
 			LoadComponents.init(header, name);
-		}, 500); //500
+		}, 1000); //500
 
 		// reveal caption pt 1
 		setTimeout(function() {
-			LoadComponents.inCenter(ptOne)
-		}, 1500); //1000
+			LoadComponents.inCenterSlow(ptOne)
+		}, 2500); //1000
 
 
 		// reveal caption pt 2
 		setTimeout(function() {
-			LoadComponents.inCenter(ptTwo)
-		}, 2200);
+			LoadComponents.inCenterSlow(ptTwo)
+		}, 3500);
 
 
 /* 		// reveal caption pt 3
@@ -106,13 +106,13 @@ Portfolio = {
 		// reveal header
 		setTimeout(function() {
 			LoadComponents.headBar(header)
-		}, 2900); //3800
+		}, 5000); //3800
 
 
 		// reveal navigation components
 		setTimeout(function() {
 			LoadComponents.headContent(pageNav, sociNav)
-		}, 3800); // 4300
+		}, 5500); // 4300
 
 	}
 }
@@ -122,6 +122,7 @@ Portfolio = {
 LoadComponents = {
 
 	"init" : function(componentOne, componentTwo) {
+		// componentOne.addClass("animate-slow fadeIn");
 		componentTwo.addClass("animate-slow fadeIn");
 	},
 
@@ -132,7 +133,12 @@ LoadComponents = {
 
 	"inCenter" : function(component) {
 		component.css("opacity", 1);
-		component.addClass("animate-norm zoomIn");
+		component.addClass("animate-norm fadeIn");
+	},
+
+	"inCenterSlow" : function(component) {
+		component.css("opacity", 1);
+		component.addClass("animate-slow fadeIn");
 	},
 
 	"inRight" : function(component) {
@@ -141,7 +147,7 @@ LoadComponents = {
 	},
 
 	"headBar" : function(component) {
-		component.addClass("animate-fast fadeIn");
+		component.addClass("animate-norm fadeIn");
 	},
 
 	"headContent" : function(componentOne, componentTwo) {

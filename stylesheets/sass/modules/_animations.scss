@@ -1,9 +1,9 @@
 // this file contains classes used for animation
 
 // variables and mixin for animation parameters
-$animFast: 1.75s;
+$animSlow: 1.5s;
 $animStrd: 1s;
-$animSlow: .5s;
+$animFast: .5s;
 $animProj: .2s;
 
 @mixin animated($speed) {
@@ -152,6 +152,18 @@ $animProj: .2s;
     }
     100% {
       @include xTransform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.fadeIn {
+  @include animName(fadeIn);
+  @include kf(fadeIn) {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
