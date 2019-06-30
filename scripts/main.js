@@ -284,7 +284,7 @@ window.onload = function() {
 	// simulate loading delay
 	mob = Portfolio.isMobile();
 	Portfolio.configure(mob);
-	MotionBG.init();
+	// MotionBG.init();
 	// Portfolio.loadSequence();
 	Portfolio.projReveal();
 }
