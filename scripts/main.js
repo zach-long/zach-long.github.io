@@ -181,7 +181,7 @@ MotionBG = {
 			pIndex = 0,
 			settings = {
 				density: 20,
-				pSize: 2,
+				pSize: 1,
 				gravity: 0,
 				floor: canvas.height,
 				leftWall: canvas.width * 0.1,
@@ -229,20 +229,21 @@ MotionBG = {
 			//  delete particles[this.id];
 			//}
 			context.beginPath();
-			context.fillStyle = "#b30000";
+			// context.fillStyle = '#bdbdbd';
+			context.fillStyle = '#4d4d4f';
 			context.arc(this.x, this.y, settings.pSize, 0, Math.PI*2, true); 
 			context.closePath();
 			context.fill();
-			//context.clearRect(settings.leftWall, settings.groundLevel, w, h);
-			//context.fillStyle = '#b30000';
-			//context.fillRect(this.x, this.y, 5, 5);
+			// context.clearRect(settings.leftWall, settings.groundLevel, w, h);
+			// context.fillStyle = '#bdbdbd';
+			// context.fillRect(this.x, this.y, 10, 1);
 			
 		}
 		
 		function float() {
 			// var grd = context.createRadialGradient(w/2, h/2, 0, w/2, h/2, w);
-			// grd.addColorStop(0, '#f2f2f2');
-			// grd.addColorStop(1, '#333');
+			// grd.addColorStop(0, '#000000');
+			// grd.addColorStop(1, '#6CABFF');
 			// context.fillStyle = grd;
 			// context.fillRect(0, 0, w, h);
 		
@@ -253,11 +254,11 @@ MotionBG = {
 		
 		// canvas background and particle spawn
 		var spawn = setInterval(function() {
-			// var grd = context.createRadialGradient(w/2, h/2, 0, w/2, h/2, w);
-			// grd.addColorStop(0, '#f2f2f2');
-			// grd.addColorStop(1, '#333');
-			// context.fillStyle = grd;
-			// context.fillRect(0, 0, w, h);
+			var grd = context.createRadialGradient(w/2, h/2, 0, w/2, h/2, w);
+			grd.addColorStop(0, '#000000');
+			grd.addColorStop(1, '#6CABFF');
+			context.fillStyle = grd;
+			context.fillRect(0, 0, w, h);
 			if (pCount >= 500) {
 			clearInterval(spawn);
 			setInterval(float, 10);
@@ -284,7 +285,7 @@ window.onload = function() {
 	// simulate loading delay
 	mob = Portfolio.isMobile();
 	Portfolio.configure(mob);
-	// MotionBG.init();
+	MotionBG.init();
 	// Portfolio.loadSequence();
 	Portfolio.projReveal();
 }
