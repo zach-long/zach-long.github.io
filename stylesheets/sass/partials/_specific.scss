@@ -279,11 +279,13 @@ header {
     position: absolute;
     margin: 0;
     padding: .25em 0 0 1em;
-    font-size: 1.25em;
-    font-weight: 300;
+    font-size: 1.1em;
+    font-weight: 400;
     @include mobileLg {
-      font-size: 1.5em;
       padding: 0 0 0 1em;
+    }
+    @include mediumLaptop {
+      font-size: 1.25em;
     }
   }
 

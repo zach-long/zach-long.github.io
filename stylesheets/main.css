@@ -610,12 +610,14 @@ header .social-nav li a {
     position: absolute;
     margin: 0;
     padding: .25em 0 0 1em;
-    font-size: 1.25em;
-    font-weight: 300; }
+    font-size: 1.1em;
+    font-weight: 400; }
     @media (min-width: 500px) {
       .project h2 {
-        font-size: 1.5em;
         padding: 0 0 0 1em; } }
+    @media (min-width: 1280px) {
+      .project h2 {
+        font-size: 1.25em; } }
   .project .offset {
     width: 98%;
     padding: 1%;
@@ -678,8 +680,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #spacebetween {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #spacebetween {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #spacebetween {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #spacebetween {
       height: 18em; } }
 
@@ -691,8 +699,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #calculator {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #calculator {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #calculator {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #calculator {
       height: 18em; } }
 
@@ -704,8 +718,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #timer {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #timer {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #timer {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #timer {
       height: 18em; } }
 
@@ -717,8 +737,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #simon {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #simon {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #simon {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #simon {
       height: 18em; } }
 
@@ -730,8 +756,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #twitch {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #twitch {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #twitch {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #twitch {
       height: 18em; } }
 
@@ -743,8 +775,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #brass {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #brass {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #brass {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #brass {
       height: 18em; } }
 
@@ -756,8 +794,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #tictac {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #tictac {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #tictac {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #tictac {
       height: 18em; } }
 
@@ -769,8 +813,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #wikipedia {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #wikipedia {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #wikipedia {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #wikipedia {
       height: 18em; } }
 
@@ -782,8 +832,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #timestamp {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #timestamp {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #timestamp {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #timestamp {
       height: 18em; } }
 
@@ -795,8 +851,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #headparse {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #headparse {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #headparse {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #headparse {
       height: 18em; } }
 
@@ -808,8 +870,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #miniurl {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #miniurl {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #miniurl {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #miniurl {
       height: 18em; } }
 
@@ -821,8 +889,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #nodevote {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #nodevote {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #nodevote {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #nodevote {
       height: 18em; } }
 
@@ -834,8 +908,14 @@ header .social-nav li a {
   height: 11em; }
   @media (min-width: 500px) {
     #makegains {
-      height: 13em; } }
+      height: 8em; } }
   @media (min-width: 1024px) {
+    #makegains {
+      height: 13em; } }
+  @media (min-width: 1280px) {
+    #makegains {
+      height: 16.5em; } }
+  @media (min-width: 1440px) {
     #makegains {
       height: 18em; } }
 

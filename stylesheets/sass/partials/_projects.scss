@@ -12,10 +12,18 @@ $projs: ('spacebetween', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tic
     height: 11em;
 
     @include mobileLg {
-      height: 13em;
+      height: 8em;
     }
 
     @include laptop {
+      height: 13em;
+    }
+
+    @include mediumLaptop {
+      height: 16.5em;
+    }
+
+    @include desktop {
       height: 18em;
     }
   }

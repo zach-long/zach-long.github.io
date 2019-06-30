@@ -50,7 +50,7 @@ $desktopW: 1440px;
 }
 
 @mixin mediumLaptop {
-  @media (min-width: #{mediumLaptop}) {
+  @media (min-width: #{$mediumLaptop}) {
     @content;
   }
 }
