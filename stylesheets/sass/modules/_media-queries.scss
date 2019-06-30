@@ -4,6 +4,7 @@ $mobileSmW: 320px;
 $mobileLgW: 500px;
 $tabletW: 768px;
 $laptopW: 1024px;
+$mediumLaptop: 1280px;
 $desktopW: 1440px;
 
 @mixin mobileSm {
@@ -30,8 +31,26 @@ $desktopW: 1440px;
   }
 }
 
+@mixin tabletMax {
+  @media (max-width: #{$tabletW}) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media (min-width: #{$laptopW}) {
+    @content;
+  }
+}
+
+@mixin laptopMax {
+  @media (max-width: #{$laptopW}) {
+    @content;
+  }
+}
+
+@mixin mediumLaptop {
+  @media (min-width: #{mediumLaptop}) {
     @content;
   }
 }

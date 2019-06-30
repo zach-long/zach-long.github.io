@@ -24,7 +24,7 @@
   <div class="background"></div>
 
   <header>
-    <ul class="nav page-nav five">
+    <ul class="nav page-nav five hidden-mobile-only">
       <li><a href="#home"><div>Home</div></a></li>
       <li><a href="#about"><div>About</div></a></li>
       <li><a href="#samples"><div>Code</div></a></li>
@@ -130,15 +130,39 @@
 
   <div class="window"></div>
 
+  <!-- fix this mess -->
   <section id="projects">
     <div class="section-title"><h1>Projects</h1></div>
-    <!-- <div id="project-description">
-      <p>Thing I have built.</p>
-      <p>Most of it is to feed my curiousity.</p>
-    </div> -->
     <div id="project-container" class="section-container">
+      
+      <!-- fix this -->
+      <div class='project-mobile hidden-laptop'>
+        <a href='http://spacebetween.band' target='_blank'><h2>Space Between - React SPA on Node.js</h2></a>
+      </div>
+      <div class='project-mobile hidden-laptop'>
+        <a href='https://makegains.herokuapp.com/' target='_blank'><h2>MakeGains - EJS, Express.js, MongoDB</h2></a>
+      </div>
+      <div class='project-mobile hidden-laptop'>
+        <a href='https://nodevote.herokuapp.com/' target='_blank'><h2>Voting App - Express.js, MongoDB</h2></a>
+      </div>
+      <div class='project-mobile hidden-laptop'>
+        <a href='https://afternoon-crag-81590.herokuapp.com/' target='_blank'><h2>MiniURL - Microservice; Node.js, MongoDB</h2></a>
+      </div>
+      <div class='project-mobile hidden-laptop'>
+        <a href='https://radiant-forest-74929.herokuapp.com/' target='_blank'><h2>Header Parser - Microservice; Node.js, MongoDB</h2></a>
+      </div>
+      <div class='project-mobile hidden-laptop'>
+        <a href='https://fierce-beyond-84088.herokuapp.com/' target='_blank'><h2>Timestamp API - Microservice; Node.js, MongoDB</h2></a>
+      </div>
+      <div class='project-mobile hidden-laptop'>
+        <a href='http://codepen.io/thezach/pen/YWGdwd' target='_blank'><h2>Pomodoro Timer - Javascript</h2></a>
+      </div>
+      <div class='project-mobile hidden-laptop'>
+        <a href='http://codepen.io/thezach/full/qZZRmq/' target='_blank'><h2>Wikipedia Application - jQuery</h2></a>
+      </div>
 
-      <div class='project'>
+      <!-- fix -->
+      <div class='project hidden-mobile'>
 	      <h2>Space Between - React SPA on Node.js</h2>
 	      <div class='offset'>
 	        <a href='http://spacebetween.band' target='_blank'>
@@ -146,7 +170,7 @@
 	        </a>
 	      </div>
       </div>
-      <div class='project'>
+      <div class='project hidden-mobile'>
           <h2>MakeGains - EJS, Express.js, MongoDB</h2>
           <div class='offset'>
             <a href='https://makegains.herokuapp.com/' target='_blank'>
@@ -154,7 +178,7 @@
             </a>
           </div>
         </div>
-      <div class='project'>
+      <div class='project hidden-mobile'>
 	      <h2>Voting App - Express.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://nodevote.herokuapp.com/' target='_blank'>
@@ -163,7 +187,7 @@
 	        </a>
 	      </div>
 	    </div>
-      <div class='project'>
+      <div class='project hidden-mobile'>
 	      <h2>MiniURL - Microservice; Node.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://afternoon-crag-81590.herokuapp.com/' target='_blank'>
@@ -173,7 +197,7 @@
 	        </a>
 	      </div>
 	    </div>
-      <div class='project'>
+      <div class='project hidden-mobile'>
 	      <h2>Header Parser - Microservice; Node.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://radiant-forest-74929.herokuapp.com/' target='_blank'>
@@ -183,7 +207,7 @@
 	        </a>
 	      </div>
 	    </div>
-      <div class='project'>
+      <div class='project hidden-mobile'>
 	      <h2>Timestamp API - Microservice; Node.js, MongoDB</h2>
 	      <div class='offset'>
 	        <a href='https://fierce-beyond-84088.herokuapp.com/' target='_blank'>
@@ -193,15 +217,7 @@
 	        </a>
 	      </div>
 	    </div>
-      <!-- <div class='project'>
-	      <h2>JavaScript Calculator - jQuery</h2>
-	      <div class='offset'>
-	        <a href='http://codepen.io/thezach/full/vKYdvL/' target='_blank'>
-	           <div id='calculator'></div>
-	        </a>
-	      </div>
-	    </div> -->
-      <div class='project'>
+      <div class='project hidden-mobile'>
 	      <h2>Pomodoro Timer - Javascript</h2>
 	      <div class='offset'>
 	        <a href='http://codepen.io/thezach/pen/YWGdwd' target='_blank'>
@@ -209,23 +225,7 @@
 	        </a>
 	      </div>
 	    </div>
-      <!-- <div class='project'>
-	      <h2>Simon - jQuery</h2>
-	      <div class='offset'>
-	        <a href='http://codepen.io/thezach/pen/XKMOwP' target='_blank'>
-	           <div id='simon'></div>
-	        </a>
-	      </div>
-	    </div>
-      <div class='project'>
-	      <h2>Tic-Tac-Toe - Javascript</h2>
-	      <div class='offset'>
-	        <a href='http://codepen.io/thezach/full/LZxRbQ/' target='_blank'>
-	           <div id='tictac'></div>
-	        </a>
-	      </div>
-	    </div> -->
-      <div class='project'>
+      <div class='project hidden-mobile'>
 	      <h2>Wikipedia Application - jQuery</h2>
 	      <div class='offset'>
 	        <a href='http://codepen.io/thezach/full/qZZRmq/' target='_blank'>

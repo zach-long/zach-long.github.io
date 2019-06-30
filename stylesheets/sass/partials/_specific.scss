@@ -1,9 +1,18 @@
 /* contains styling considered too specific to include in
    a generic 'structure' layout file */
 
+pre {
+  max-width: 90%;
+  margin: auto;
+}
+
 code {
   font-family: Consolas, monaco, monospace;
   font-size: .8em;
+
+  @include mediumLaptop {
+
+  }
 }
 
 .background {
@@ -63,20 +72,20 @@ header {
 }
 
 #home {
-  padding: 15vh 10vh 10vh;
-  font-size: 1.25em;
+  padding: 12vh 0vh 10vh;
+  font-size: 2em;
   font-weight: 300;
   color: $defaultColor;
   background-color: rgba(51, 51, 51, $transparency);
 
   @include tablet {
-    font-size: 2em;
+    font-size: 3em;
     padding: 10vh 0 0 0;
     height: 90vh;
   }
 
   @include laptop {
-    font-size: 3em;
+    // font-size: 3em;
   }
 
   h1 {
@@ -119,9 +128,9 @@ header {
   p:last-child {
     text-align: center;
     a {
-      transition: color 300ms;
+      transition: $linkColorTransition;
       &:hover {
-        color: #000;
+        color: $linkColorOnHover;
       }
     }
   }
@@ -241,6 +250,11 @@ header {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+  @include laptopMax {
+    @include xBrowserFlexCol {
+
+    }
+  }
 }
 
 .project {
@@ -251,12 +265,13 @@ header {
   width: 96%;
 
   @include tablet {
-    width: 45%;
+    
   }
 
   @include laptop {
     flex: 0 1 auto;
     margin: 0 .5em 5em .5em;
+    width: 45%;
   }
 
   h2 {
@@ -291,6 +306,18 @@ header {
   }
 }
 
+.project-mobile {
+  margin-bottom: 1em;
+  width: 100%;
+
+  a {
+    transition: $linkColorTransition;
+    &:hover {
+      color: $linkColorOnHover;
+    }
+  }
+}
+
 #contact {
   .section-container {
     text-align: center;
@@ -304,10 +331,10 @@ header {
       display: inline-block;
       margin: auto;
       flex: 1 0 0;
-      transition: color 300ms;
+      transition: $linkColorTransition;
 
       &:hover {
-        color: #000;
+        color: $linkColorOnHover;
       }
     }
   }
@@ -317,4 +344,22 @@ header {
   font-size: 1.5em;
   font-weight: bold;
   vertical-align: middle;
+}
+
+.hidden-mobile {
+  @include laptopMax {
+    display: none !important;
+  }
+}
+
+.hidden-mobile-only {
+  @include tabletMax {
+    display: none !important;
+  }
+}
+
+.hidden-laptop {
+  @include laptop {
+    display: none !important;
+  }
 }
