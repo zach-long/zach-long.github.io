@@ -196,3 +196,102 @@ $animProj: .2s;
     }
   }
 }
+
+@mixin animate($name, $dur, $func) {
+  animation: $name;
+  animation-duration: $dur;
+  animation-timing-function: $func;
+  -moz-animation: $name;
+  -moz-animation-duration: $dur;
+  -moz-animation-timing-function: $func;
+  -o-animation: $name;
+  -o-animation-duration: $dur;
+  -o-animation-timing-function: $func;
+  -webkit-animation: $name;
+  -webkit-animation-duration: $dur;
+  -webkit-animation-timing-function: $func;
+}
+
+@mixin animate-timing($delay, $fill) {
+  animation-delay: $delay;
+  animation-fill-mode: $fill;
+  -moz-animation-delay: $delay;
+  -moz-animation-fill-mode: $fill;
+  -o-animation-delay: $delay;
+  -o-animation-fill-mode: $fill;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-fill-mode: $fill;
+}
+
+$fadeInStart: 0;
+$durDelay: 1000ms;
+$durNameAnim: 1500ms;
+$durPt1Anim: 1000ms;
+$durPt2Anim: 1000ms;
+$durHeadbarAnim: 500ms;
+$durNavAnim: 1000ms;
+
+@include kf(slideInLeft) {
+  0% {
+    visibility: visible;
+    @include xTransform(translate3d(-100%, 0, 0));
+  }
+  100% {
+    @include xTransform(translate3d(0, 0, 0));
+  }
+}
+
+@include kf(slideInDown) {
+  0% {
+    visibility: visible;
+    @include xTransform(translate3d(0, -100%, 0));
+  }
+  100% {
+    @include xTransform(translate3d(0, 0, 0));
+  }
+}
+
+@include kf(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#me {
+  @include animate(fadeIn, $durNameAnim, ease);
+  @include animate-timing($durDelay, forwards);
+  opacity: $fadeInStart;
+}
+
+#pt1 {
+  @include animate(fadeIn, $durPt1Anim, ease);
+  @include animate-timing($durDelay + $durNameAnim, forwards);
+  opacity: $fadeInStart;
+}
+
+#pt2 {
+  @include animate(fadeIn, $durPt2Anim, ease);
+  @include animate-timing($durDelay + $durNameAnim + $durPt1Anim, forwards);
+  opacity: $fadeInStart;
+}
+
+header {
+  @include animate(fadeIn, $durHeadbarAnim, ease);
+  @include animate-timing($durDelay + $durNameAnim + $durPt1Anim + $durPt2Anim, forwards);
+  opacity: $fadeInStart;
+}
+
+.page-nav {
+  @include xTransform(translate3d(-100%, 0, 0));
+  @include animate(slideInLeft, $durNavAnim, ease);
+  @include animate-timing($durDelay + $durNameAnim + $durPt1Anim + $durPt2Anim + $durHeadbarAnim, forwards);
+}
+
+.social-nav {
+  @include xTransform(translate3d(0, -100%, 0));
+  @include animate(slideInDown, $durNavAnim, ease);
+  @include animate-timing($durDelay + $durNameAnim + $durPt1Anim + $durPt2Anim + $durHeadbarAnim, forwards);
+}

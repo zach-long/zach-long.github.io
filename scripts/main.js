@@ -37,13 +37,13 @@ Portfolio = {
 
 		var hideElems = [header, name, ptOne, ptTwo, ptThree, pageNav, sociNav, projs];
 
-		for (i = 0; i < hideElems.length; i++) {
-			hideElems[i].css("opacity", 0);
-		}
+		// for (i = 0; i < hideElems.length; i++) {
+		// 	hideElems[i].css("opacity", 0);
+		// }
 
-		if (bool) {
-			pic.css("display", "none");
-		}
+		// if (bool) {
+		// 	pic.css("display", "none");
+		// }
 
 	},
 
@@ -163,10 +163,10 @@ LoadComponents = {
 // plays load sequence,
 // enables scroll listening
 window.onload = function() {
-	mob = Portfolio.isMobile();
-	Portfolio.configure(mob);
-	Portfolio.loadSequence();
+	// simulate loading delay
+	// mob = Portfolio.isMobile();
+	// Portfolio.configure(mob);
+	// Portfolio.loadSequence();
 	Portfolio.projReveal();
-	
 }
 hljs.initHighlightingOnLoad();
