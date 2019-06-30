@@ -1,7 +1,8 @@
 // define object variables
 var Portfolio,
-		LoadComponents,
-		Projects;
+	LoadComponents,
+	Projects,
+	MotionBG;
 
 var mob;
 
@@ -35,11 +36,11 @@ Portfolio = {
 		projs = $(".project"),
 		pic = $("#profile-pic");
 
-		var hideElems = [header, name, ptOne, ptTwo, ptThree, pageNav, sociNav, projs];
+		var hideElems = [projs];
 
-		// for (i = 0; i < hideElems.length; i++) {
-		// 	hideElems[i].css("opacity", 0);
-		// }
+		for (i = 0; i < hideElems.length; i++) {
+			hideElems[i].css("opacity", 0);
+		}
 
 		// if (bool) {
 		// 	pic.css("display", "none");
@@ -159,13 +160,128 @@ LoadComponents = {
 
 }
 
+MotionBG = {
+	"init" : function() {
+		window.onload = function() {
+  
+			// define canvas
+			var canvas = document.createElement('canvas'),
+				context = canvas.getContext('2d');
+		  
+			w = canvas.width = window.innerWidth;
+			h = canvas.height = window.innerHeight;
+		  
+			document.body.appendChild(canvas);
+		  
+			// particle parameters
+			pCount = 0;
+			var particles = {},
+				pIndex = 0,
+				settings = {
+				  density: 20,
+				  pSize: 2,
+				  gravity: 0,
+				  floor: canvas.height,
+				  leftWall: canvas.width * 0.1,
+				  rightWall: canvas.width
+				}
+			
+			// particle origin and velocity
+			function Particle() {
+			  this.x = Math.random() * w;
+			  this.y = Math.random() * h;
+			  
+			  switch (Math.floor(Math.random() * 4)) {
+				case 0:
+				  this.vx = .025;
+				  this.vy = .025;
+				  break;
+				case 1:
+				  this.vx = -.025;
+				  this.vy = -.025;
+				  break;
+				case 2:
+				  this.vx = -.025;
+				  this.vy = .025;
+				  break;
+				case 3:
+				  this.vx = .025;
+				  this.vy = -.025;
+				  break;
+			  }
+		  
+			  pIndex ++;
+			  particles[pIndex] = this;
+			  //this.id = pIndex;
+			  //this.life = 0;
+			  //this.maxLife = 500;
+			}
+			
+			// motion and particle size & color
+			Particle.prototype.draw = function() {
+			  this.x += this.vx;
+			  this.y += this.vy;
+		  
+			  //this.life++;
+			  //if (this.life >= this.maxLife) {
+			  //  delete particles[this.id];
+			  //}
+			  context.beginPath();
+			  context.fillStyle = "#b30000";
+			  context.arc(this.x, this.y, settings.pSize, 0, Math.PI*2, true); 
+			  context.closePath();
+			  context.fill();
+			  //context.clearRect(settings.leftWall, settings.groundLevel, w, h);
+			  //context.fillStyle = '#b30000';
+			  //context.fillRect(this.x, this.y, 5, 5);
+			  
+			}
+		  
+			function float() {
+			  var grd = context.createRadialGradient(w/2, h/2, 0, w/2, h/2, w);
+			  grd.addColorStop(0, '#f2f2f2');
+			  grd.addColorStop(1, '#333');
+			  context.fillStyle = grd;
+			  context.fillRect(0, 0, w, h);
+		  
+			  for (var i in particles) {
+				particles[i].draw();
+			  }
+			}
+		  
+			// canvas background and particle spawn
+			var spawn = setInterval(function() {
+			  var grd = context.createRadialGradient(w/2, h/2, 0, w/2, h/2, w);
+			  grd.addColorStop(0, '#f2f2f2');
+			  grd.addColorStop(1, '#333');
+			  context.fillStyle = grd;
+			  context.fillRect(0, 0, w, h);
+			  if (pCount >= 500) {
+				clearInterval(spawn);
+				setInterval(float, 10);
+			  }
+			  for (var i = 0; i < settings.density; i++) {
+				if (Math.random() > .8) {
+				  new Particle();
+				  pCount += 1;
+				}
+		  
+			  }
+			  for (var i in particles) {
+				particles[i].draw();
+			  }
+			}, 10);
+		}
+	}
+}
+
 // Hides animated elems,
 // plays load sequence,
 // enables scroll listening
 window.onload = function() {
 	// simulate loading delay
-	// mob = Portfolio.isMobile();
-	// Portfolio.configure(mob);
+	mob = Portfolio.isMobile();
+	Portfolio.configure(mob);
 	// Portfolio.loadSequence();
 	Portfolio.projReveal();
 }
