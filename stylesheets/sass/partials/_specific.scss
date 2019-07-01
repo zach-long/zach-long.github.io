@@ -74,16 +74,22 @@ header {
 
 
 #home {
-  padding: 12vh 0vh 10vh;
+  // padding: 12vh 0vh 10vh;
   font-size: 2em;
   font-weight: 300;
   color: $defaultColor;
   background-color: rgba(51, 51, 51, $transparency);
+  // height: 80vh;
+  height: 100vh;
+  @include xBrowserFlexCol {
+    justify-content: center;
+    -webkit-justify-content: center;
+  };
 
   @include tablet {
     font-size: 3em;
-    padding: 10vh 0 0 0;
-    height: 90vh;
+    // padding: 10vh 0 0 0;
+    // height: 90vh;
   }
 
   @include laptop {
@@ -94,13 +100,12 @@ header {
     font-weight: 400;
     text-align: center;
     @include tablet {
-      padding-top: 20vh;
+      // padding-top: 20vh;
     }
   }
 
   #caption {
     width: 55%;
-    margin: auto;
     text-align: center;
     @include xBrowserFlexCol {
       -webkit-flex-wrap: nowrap;

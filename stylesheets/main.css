@@ -775,31 +775,35 @@ header .social-nav li a div img {
 }
 
 #home {
-  padding: 12vh 0vh 10vh;
   font-size: 2em;
   font-weight: 300;
   color: #FFF;
   background-color: rgba(51, 51, 51, 0.25);
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  justify-content: center;
+  -webkit-justify-content: center;
 }
 @media (min-width: 768px) {
   #home {
     font-size: 3em;
-    padding: 10vh 0 0 0;
-    height: 90vh;
   }
 }
 #home h1 {
   font-weight: 400;
   text-align: center;
 }
-@media (min-width: 768px) {
-  #home h1 {
-    padding-top: 20vh;
-  }
-}
 #home #caption {
   width: 55%;
-  margin: auto;
   text-align: center;
   display: -webkit-flex;
   display: flex;
