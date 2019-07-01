@@ -981,13 +981,12 @@ header .social-nav li a div img {
   margin-bottom: 5em;
   flex: 0 1 auto;
   margin: 0 0.5em 5em 0.5em;
-  width: 96%;
+  width: 57vh;
 }
 @media (min-width: 1024px) {
   .project {
     flex: 0 1 auto;
     margin: 0 0.5em 5em 0.5em;
-    width: 45%;
   }
 }
 .project h2 {
@@ -1083,27 +1082,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #spacebetween {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #spacebetween {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #spacebetween {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #spacebetween {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #calculator {
@@ -1111,27 +1090,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #calculator {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #calculator {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #calculator {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #calculator {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #timer {
@@ -1139,27 +1098,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #timer {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #timer {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #timer {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #timer {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #simon {
@@ -1167,27 +1106,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #simon {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #simon {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #simon {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #simon {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #twitch {
@@ -1195,27 +1114,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #twitch {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #twitch {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #twitch {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #twitch {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #brass {
@@ -1223,27 +1122,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #brass {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #brass {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #brass {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #brass {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #tictac {
@@ -1251,27 +1130,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #tictac {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #tictac {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #tictac {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #tictac {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #wikipedia {
@@ -1279,27 +1138,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #wikipedia {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #wikipedia {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #wikipedia {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #wikipedia {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #timestamp {
@@ -1307,27 +1146,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #timestamp {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #timestamp {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #timestamp {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #timestamp {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #headparse {
@@ -1335,27 +1154,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #headparse {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #headparse {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #headparse {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #headparse {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #miniurl {
@@ -1363,27 +1162,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #miniurl {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #miniurl {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #miniurl {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #miniurl {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #nodevote {
@@ -1391,27 +1170,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #nodevote {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #nodevote {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #nodevote {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #nodevote {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 #makegains {
@@ -1419,27 +1178,7 @@ header .social-nav li a div img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 11em;
-}
-@media (min-width: 500px) {
-  #makegains {
-    height: 8em;
-  }
-}
-@media (min-width: 1024px) {
-  #makegains {
-    height: 13em;
-  }
-}
-@media (min-width: 1280px) {
-  #makegains {
-    height: 16.5em;
-  }
-}
-@media (min-width: 1440px) {
-  #makegains {
-    height: 18em;
-  }
+  height: 31vh;
 }
 
 .api {

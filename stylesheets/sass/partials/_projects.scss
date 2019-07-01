@@ -9,23 +9,24 @@ $projs: ('spacebetween', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tic
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 11em;
+    // height: 11em;
+    height: 31vh;
 
-    @include mobileLg {
-      height: 8em;
-    }
+    // @include mobileLg {
+    //   height: 8em;
+    // }
 
-    @include laptop {
-      height: 13em;
-    }
+    // @include laptop {
+    //   height: 13em;
+    // }
 
-    @include mediumLaptop {
-      height: 16.5em;
-    }
+    // @include mediumLaptop {
+    //   height: 16.5em;
+    // }
 
-    @include desktop {
-      height: 18em;
-    }
+    // @include desktop {
+    //   height: 18em;
+    // }
   }
 }
 

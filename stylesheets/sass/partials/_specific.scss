@@ -265,7 +265,8 @@ header {
   margin-bottom: 5em;
   flex: 0 1 auto;
   margin: 0 .5em 5em .5em;
-  width: 96%;
+  // width: 96%;
+  width: 57vh;
 
   @include tablet {
     
@@ -274,7 +275,7 @@ header {
   @include laptop {
     flex: 0 1 auto;
     margin: 0 .5em 5em .5em;
-    width: 45%;
+    // width: 45%;
   }
 
   h2 {
