@@ -180,8 +180,8 @@ MotionBG = {
 		var particles = {},
 			pIndex = 0,
 			settings = {
-				density: 20,
-				pSize: 1,
+				density: Portfolio.isMobile ? 10 : 20,
+				pSize: Portfolio.isMobile ? .5 : 1,
 				gravity: 0,
 				floor: canvas.height,
 				leftWall: canvas.width * 0.1,
@@ -195,28 +195,28 @@ MotionBG = {
 			
 			switch (Math.floor(Math.random() * 4)) {
 			case 0:
-				this.vx = .025;
-				this.vy = .025;
+				this.vx = .035;
+				this.vy = .035;
 				break;
 			case 1:
-				this.vx = -.025;
-				this.vy = -.025;
+				this.vx = -.035;
+				this.vy = -.035;
 				break;
 			case 2:
-				this.vx = -.025;
-				this.vy = .025;
+				this.vx = -.035;
+				this.vy = .035;
 				break;
 			case 3:
-				this.vx = .025;
-				this.vy = -.025;
+				this.vx = .035;
+				this.vy = -.035;
 				break;
 			}
 		
 			pIndex ++;
 			particles[pIndex] = this;
-			//this.id = pIndex;
-			//this.life = 0;
-			//this.maxLife = 500;
+			this.id = pIndex;
+			this.life = 0;
+			this.maxLife = 10000;
 		}
 		
 		// motion and particle size & color
@@ -224,23 +224,19 @@ MotionBG = {
 			this.x += this.vx;
 			this.y += this.vy;
 		
-			//this.life++;
-			//if (this.life >= this.maxLife) {
-			//  delete particles[this.id];
-			//}
+			this.life++;
+			if (this.life >= this.maxLife) {
+			 delete particles[this.id];
+			}
 			context.beginPath();
-			// context.fillStyle = '#bdbdbd';
 			context.fillStyle = '#4d4d4f';
 			context.arc(this.x, this.y, settings.pSize, 0, Math.PI*2, true); 
 			context.closePath();
 			context.fill();
-			// context.clearRect(settings.leftWall, settings.groundLevel, w, h);
-			// context.fillStyle = '#bdbdbd';
-			// context.fillRect(this.x, this.y, 10, 1);
-			
 		}
 		
 		function float() {
+			// makes particle float instead of leaving a trace
 			// var grd = context.createRadialGradient(w/2, h/2, 0, w/2, h/2, w);
 			// grd.addColorStop(0, '#000000');
 			// grd.addColorStop(1, '#6CABFF');
@@ -248,20 +244,20 @@ MotionBG = {
 			// context.fillRect(0, 0, w, h);
 		
 			for (var i in particles) {
-			particles[i].draw();
+				particles[i].draw();
 			}
 		}
 		
 		// canvas background and particle spawn
 		var spawn = setInterval(function() {
 			var grd = context.createRadialGradient(w/2, h/2, 0, w/2, h/2, w);
-			grd.addColorStop(0, '#000000');
-			grd.addColorStop(1, '#6CABFF');
+			grd.addColorStop(0, 'transparent');
+			grd.addColorStop(1, 'transparent');
 			context.fillStyle = grd;
 			context.fillRect(0, 0, w, h);
 			if (pCount >= 500) {
-			clearInterval(spawn);
-			setInterval(float, 10);
+				clearInterval(spawn);
+				setInterval(float, 10);
 			}
 			for (var i = 0; i < settings.density; i++) {
 			if (Math.random() > .8) {
@@ -278,15 +274,10 @@ MotionBG = {
 	}
 }
 
-// Hides animated elems,
-// plays load sequence,
-// enables scroll listening
 window.onload = function() {
-	// simulate loading delay
 	mob = Portfolio.isMobile();
 	Portfolio.configure(mob);
 	MotionBG.init();
-	// Portfolio.loadSequence();
 	Portfolio.projReveal();
 }
 hljs.initHighlightingOnLoad();
