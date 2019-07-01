@@ -12,6 +12,10 @@ $projs: ('spacebetween', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tic
     // height: 11em;
     height: 31vh;
 
+    @include portrait {
+      height: 47vw;
+    }
+
     // @include mobileLg {
     //   height: 8em;
     // }

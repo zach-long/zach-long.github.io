@@ -260,6 +260,8 @@ header {
   }
 }
 
+
+
 .project {
   background: $flairColor;
   margin-bottom: 5em;
@@ -267,6 +269,11 @@ header {
   margin: 0 .5em 5em .5em;
   // width: 96%;
   width: 57vh;
+
+  @include portrait {
+    width: 84vw;
+  }
+  
 
   @include tablet {
     
@@ -283,10 +290,11 @@ header {
     position: absolute;
     margin: 0;
     padding: .25em 0 0 1em;
-    font-size: 1.1em;
+    font-size: .85em;
     font-weight: 400;
     @include mobileLg {
       padding: 0 0 0 1em;
+      font-size: 1em;
     }
     @include mediumLaptop {
       font-size: 1.25em;

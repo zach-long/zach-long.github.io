@@ -983,6 +983,11 @@ header .social-nav li a div img {
   margin: 0 0.5em 5em 0.5em;
   width: 57vh;
 }
+@media (orientation: portrait) {
+  .project {
+    width: 84vw;
+  }
+}
 @media (min-width: 1024px) {
   .project {
     flex: 0 1 auto;
@@ -994,12 +999,13 @@ header .social-nav li a div img {
   position: absolute;
   margin: 0;
   padding: 0.25em 0 0 1em;
-  font-size: 1.1em;
+  font-size: 0.85em;
   font-weight: 400;
 }
 @media (min-width: 500px) {
   .project h2 {
     padding: 0 0 0 1em;
+    font-size: 1em;
   }
 }
 @media (min-width: 1280px) {
@@ -1084,6 +1090,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media (orientation: portrait) {
+  #spacebetween {
+    height: 47vw;
+  }
+}
 
 #calculator {
   background: url("../resources/images/thumbnails/calculator.png");
@@ -1091,6 +1102,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media (orientation: portrait) {
+  #calculator {
+    height: 47vw;
+  }
 }
 
 #timer {
@@ -1100,6 +1116,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media (orientation: portrait) {
+  #timer {
+    height: 47vw;
+  }
+}
 
 #simon {
   background: url("../resources/images/thumbnails/simon.png");
@@ -1107,6 +1128,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media (orientation: portrait) {
+  #simon {
+    height: 47vw;
+  }
 }
 
 #twitch {
@@ -1116,6 +1142,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media (orientation: portrait) {
+  #twitch {
+    height: 47vw;
+  }
+}
 
 #brass {
   background: url("../resources/images/thumbnails/brass.png");
@@ -1123,6 +1154,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media (orientation: portrait) {
+  #brass {
+    height: 47vw;
+  }
 }
 
 #tictac {
@@ -1132,6 +1168,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media (orientation: portrait) {
+  #tictac {
+    height: 47vw;
+  }
+}
 
 #wikipedia {
   background: url("../resources/images/thumbnails/wikipedia.png");
@@ -1139,6 +1180,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media (orientation: portrait) {
+  #wikipedia {
+    height: 47vw;
+  }
 }
 
 #timestamp {
@@ -1148,6 +1194,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media (orientation: portrait) {
+  #timestamp {
+    height: 47vw;
+  }
+}
 
 #headparse {
   background: url("../resources/images/thumbnails/headparse.png");
@@ -1155,6 +1206,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media (orientation: portrait) {
+  #headparse {
+    height: 47vw;
+  }
 }
 
 #miniurl {
@@ -1164,6 +1220,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media (orientation: portrait) {
+  #miniurl {
+    height: 47vw;
+  }
+}
 
 #nodevote {
   background: url("../resources/images/thumbnails/nodevote.png");
@@ -1172,6 +1233,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media (orientation: portrait) {
+  #nodevote {
+    height: 47vw;
+  }
+}
 
 #makegains {
   background: url("../resources/images/thumbnails/makegains.png");
@@ -1179,6 +1245,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media (orientation: portrait) {
+  #makegains {
+    height: 47vw;
+  }
 }
 
 .api {

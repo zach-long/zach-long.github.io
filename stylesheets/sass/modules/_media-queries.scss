@@ -60,3 +60,9 @@ $desktopW: 1440px;
     @content;
   }
 }
+
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
