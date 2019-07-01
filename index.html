@@ -73,8 +73,8 @@
             <li>This module draws data from a private <code>config.json</code> established by the user. This allows the user to set their own parameters for the server like name, IP, and port, without needing to put it in the code.</li>
             <li>This particular module is where bot commands are established. The <code>commands</code> Object acts as a controller for this. Using the <code>"status"</code> Object as an example, we can see:</li>
             <ul>
-              <li><code>"name"</code>: The property of this is what users - people who can communicate with the bot - type in order to execute the command.</li>
-              <li><code>"action"</code>: This is the name of a function associated with the action.</li>
+              <li><code>"name"</code>: The property of this is what users - people who can communicate with the bot - type in order to execute the command. When the bot detects a command (not shown here) if the command prefix is followed by "status" it will do something.</li>
+              <li><code>"action"</code>: This is the name of a function associated with the action. When a user requests the command "status", the bot will run the <code>status</code> function below, which in this case calls a Function defined in another file which returns a Promise. Asynchronous design is crucial for bots so that requests do not build up and slow it down.</li>
               <li><code>"description"</code>: This is the description given to users when they might ask what the bot can do.</li>
             </ul>
           </ul>
