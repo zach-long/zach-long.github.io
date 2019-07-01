@@ -9,28 +9,15 @@ $projs: ('spacebetween', 'calculator', 'timer', 'simon', 'twitch', 'brass', 'tic
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    // height: 11em;
     height: 31vh;
+
+    @include landscapePhone {
+      height: 55vh;
+    }
 
     @include portrait {
       height: 47vw;
-    }
-
-    // @include mobileLg {
-    //   height: 8em;
-    // }
-
-    // @include laptop {
-    //   height: 13em;
-    // }
-
-    // @include mediumLaptop {
-    //   height: 16.5em;
-    // }
-
-    // @include desktop {
-    //   height: 18em;
-    // }
+    } 
   }
 }
 

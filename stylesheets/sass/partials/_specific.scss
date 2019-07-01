@@ -9,10 +9,6 @@ pre {
 code {
   font-family: Consolas, monaco, monospace;
   font-size: .8em;
-
-  @include mediumLaptop {
-
-  }
 }
 
 .background {
@@ -71,15 +67,11 @@ header {
   }
 }
 
-
-
 #home {
-  // padding: 12vh 0vh 10vh;
   font-size: 2em;
   font-weight: 300;
   color: $defaultColor;
   background-color: rgba(51, 51, 51, $transparency);
-  // height: 80vh;
   height: 100vh;
   @include xBrowserFlexCol {
     justify-content: center;
@@ -88,20 +80,11 @@ header {
 
   @include tablet {
     font-size: 3em;
-    // padding: 10vh 0 0 0;
-    // height: 90vh;
-  }
-
-  @include laptop {
-    // font-size: 3em;
   }
 
   h1 {
     font-weight: 400;
     text-align: center;
-    @include tablet {
-      // padding-top: 20vh;
-    }
   }
 
   #caption {
@@ -116,9 +99,6 @@ header {
       font-size: 1em;
       font-weight: 400;
       padding: 0 .2em;
-      @include tablet {
-        //padding: 0;
-      }
     }
   }
 }
@@ -151,7 +131,6 @@ header {
     }
 
     .one-third {
-      //flex: 1 0 auto;
       img {
         width: 80%;
         display: block;
@@ -159,9 +138,6 @@ header {
         border-right: $styleBorder solid $flairColor;
       }
     }
-    // .two-thirds {
-      //flex: 2 0 auto;
-    // }
   }
 }
 
@@ -260,29 +236,24 @@ header {
   }
 }
 
-
-
 .project {
   background: $flairColor;
   margin-bottom: 5em;
   flex: 0 1 auto;
   margin: 0 .5em 5em .5em;
-  // width: 96%;
   width: 57vh;
+
+  @include landscapePhone {
+    width: 98vh;
+  }
 
   @include portrait {
     width: 84vw;
-  }
-  
-
-  @include tablet {
-    
   }
 
   @include laptop {
     flex: 0 1 auto;
     margin: 0 .5em 5em .5em;
-    // width: 45%;
   }
 
   h2 {

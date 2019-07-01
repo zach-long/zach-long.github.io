@@ -736,6 +736,7 @@ code {
   font-family: Consolas, monaco, monospace;
   font-size: 0.8em;
 }
+
 .background {
   background: radial-gradient(circle farthest-corner at center, #000000, #6CABFF);
   width: 100vw;
@@ -824,6 +825,7 @@ header .social-nav li a div img {
   font-weight: 400;
   padding: 0 0.2em;
 }
+
 #about p:not(:last-child) {
   margin-bottom: 1em;
 }
@@ -983,6 +985,11 @@ header .social-nav li a div img {
   margin: 0 0.5em 5em 0.5em;
   width: 57vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  .project {
+    width: 98vh;
+  }
+}
 @media (orientation: portrait) {
   .project {
     width: 84vw;
@@ -1090,6 +1097,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #spacebetween {
+    height: 55vh;
+  }
+}
 @media (orientation: portrait) {
   #spacebetween {
     height: 47vw;
@@ -1102,6 +1114,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #calculator {
+    height: 55vh;
+  }
 }
 @media (orientation: portrait) {
   #calculator {
@@ -1116,6 +1133,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #timer {
+    height: 55vh;
+  }
+}
 @media (orientation: portrait) {
   #timer {
     height: 47vw;
@@ -1128,6 +1150,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #simon {
+    height: 55vh;
+  }
 }
 @media (orientation: portrait) {
   #simon {
@@ -1142,6 +1169,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #twitch {
+    height: 55vh;
+  }
+}
 @media (orientation: portrait) {
   #twitch {
     height: 47vw;
@@ -1154,6 +1186,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #brass {
+    height: 55vh;
+  }
 }
 @media (orientation: portrait) {
   #brass {
@@ -1168,6 +1205,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #tictac {
+    height: 55vh;
+  }
+}
 @media (orientation: portrait) {
   #tictac {
     height: 47vw;
@@ -1180,6 +1222,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #wikipedia {
+    height: 55vh;
+  }
 }
 @media (orientation: portrait) {
   #wikipedia {
@@ -1194,6 +1241,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #timestamp {
+    height: 55vh;
+  }
+}
 @media (orientation: portrait) {
   #timestamp {
     height: 47vw;
@@ -1206,6 +1258,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #headparse {
+    height: 55vh;
+  }
 }
 @media (orientation: portrait) {
   #headparse {
@@ -1220,6 +1277,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #miniurl {
+    height: 55vh;
+  }
+}
 @media (orientation: portrait) {
   #miniurl {
     height: 47vw;
@@ -1233,6 +1295,11 @@ header .social-nav li a div img {
   background-repeat: no-repeat;
   height: 31vh;
 }
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #nodevote {
+    height: 55vh;
+  }
+}
 @media (orientation: portrait) {
   #nodevote {
     height: 47vw;
@@ -1245,6 +1312,11 @@ header .social-nav li a div img {
   background-size: cover;
   background-repeat: no-repeat;
   height: 31vh;
+}
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+  #makegains {
+    height: 55vh;
+  }
 }
 @media (orientation: portrait) {
   #makegains {

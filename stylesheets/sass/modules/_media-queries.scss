@@ -66,3 +66,9 @@ $desktopW: 1440px;
     @content;
   }
 }
+
+@mixin landscapePhone {
+  @media screen and (max-height: #{$mobileLgW}) and (max-width: #{$laptopW}) {
+    @content;
+  }
+}
